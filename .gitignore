@@ -41,3 +41,10 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+*.cmd
+node_modules
+node_modules/.bin/cleancss
+node_modules/.bin/cssesc
+node_modules/.bin/node-gyp
+node_modules/.bin/babylon
+node_modules/.bin/ansi-html
