@@ -8,6 +8,7 @@ import AddressList from '../module/addressList/index.vue'
 import createListView from '../module/addressList/CreateListView.js'
 import addAddressList from '../module/addressList/add.vue'
 import infoAddressList from '../module/addressList/info.vue'
+import brands from '../module/brands/brands.vue'
 
 export default new Router({
   mode: 'history',
@@ -25,7 +26,8 @@ export default new Router({
         { path : '/AddressList/favorite/:id(\\d+)', component: infoAddressList}
       ]
     },
+    { path: '/brands',component: brands  },
     { path: '/About', component: About },
-    { path: '*', redirect: '/AddressList' }
+    { path: '/AddressList', redirect: '/AddressList' }
   ]
 })
