@@ -52,21 +52,25 @@
             </div>
           </div>
         </div>
+      <router-link to="/brands" class="jump_part">
       <div class="item">
         <div class="in-item  my-item">
           <div class="couponIn-icon w-18">
             <i class="glyphicon glyphicon-tag"></i>
           </div>
-          <div class="in-item-info my-item bdbr-1px">
-            <div class="fl">
-              <span class="myJD-Order">品牌专区</span>
+
+            <div class="in-item-info my-item bdbr-1px">
+              <div class="fl">
+                <span class="myJD-Order">品牌专区</span>
+              </div>
+              <div class="fr">
+                <i class="glyphicon glyphicon-chevron-right"></i>
+              </div>
             </div>
-            <div class="fr">
-              <i class="glyphicon glyphicon-chevron-right"></i>
-            </div>
-          </div>
         </div>
       </div>
+      </router-link>
+
       <div class="item">
         <div class="in-item  my-item">
           <div class="couponIn-icon w-18">
@@ -218,12 +222,12 @@
         ul
           list-style none
           padding 0
-        a
-          width 33%
-          float left
-          color #333
-          margin 0
-          font-size 12px
+          a
+            width 33%
+            float left
+            color #333
+            margin 0
+            font-size 12px
           .watch-goods
             display block
             text-align center
@@ -239,6 +243,10 @@
       height 100%
       .item
         width 100%
+    .jump_part
+            width 100%
+            margin-right 0
+            display block
         .in-item
           height 44px
           line-height 44px
@@ -266,9 +274,10 @@
           border-bottom 1px solid #e3e5e9
           .fl
             float left
-          span
-            display inline-block
-            vertical-align middle
+            span
+              display inline-block
+              vertical-align middle
+              color #333
           .fr
             float right
             color #999

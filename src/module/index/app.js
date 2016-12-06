@@ -9,7 +9,7 @@ import EgdSideBar from 'sidebar'
 sync(store, router)
 
 Vue.use(VueProgressBar, {
-  color: '#0e77f1',
+  color: '#5cb85c',
   failedColor: 'red',
   height: '2px'
 })
