@@ -38,7 +38,7 @@
                     {brandsName: '麦西恩',brandsImg:'static/images/1464131621150210414.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
                     {brandsName: '荷美尔',brandsImg:'static/images/1464133918021244284.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
                     {brandsName: '爱薯福',brandsImg:'static/images/1464133234297250681.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
-                    {brandsName: 'ligo',brandsImg:'static/images/1464133580775209681.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: 'ligo',brandsImg:'static/images/1464133580775209681.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' }
                 ]
             }
 

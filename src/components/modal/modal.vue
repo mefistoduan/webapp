@@ -147,7 +147,7 @@
                     <div class="modal-footer">
                         <slot name="footer">
                             <button class="btn btn-warning" type="button" :class="cancelClass" @click="cancel" name="cancelText">{{cancelText}}</button>
-                            <button class="btn btn-primary" type="button" :class="okClass" @click="ok" name="okText">{{okText}}</button>
+                            <button class="btn btn-success" type="button" :class="okClass" @click="ok" name="okText">{{okText}}</button>
                         </slot>
                     </div>
                 </div>
