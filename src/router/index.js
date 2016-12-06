@@ -9,6 +9,7 @@ import createListView from '../module/addressList/CreateListView.js'
 import addAddressList from '../module/addressList/add.vue'
 import infoAddressList from '../module/addressList/info.vue'
 import brands from '../module/brands/brands.vue'
+import address from '../module/address/address.vue'
 
 export default new Router({
   mode: 'history',
@@ -28,6 +29,7 @@ export default new Router({
     },
     { path: '/brands',component: brands  },
     { path: '/About', component: About },
+    { path: '/address', component: address },
     { path: '/AddressList', redirect: '/AddressList' }
   ]
 })

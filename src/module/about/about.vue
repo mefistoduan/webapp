@@ -38,20 +38,6 @@
     </div>
     <div class="body">
         <div class="item">
-          <div class="in-item  my-item">
-            <div class="couponIn-icon w-18">
-              <i class="glyphicon glyphicon-gift"></i>
-            </div>
-            <div class="in-item-info my-item bdbr-1px">
-              <div class="fl">
-                <span class="myJD-Order">积分兑换</span>
-              </div>
-              <div class="fr">
-                <i class="glyphicon glyphicon-chevron-right"></i>
-              </div>
-            </div>
-          </div>
-        </div>
       <router-link to="/brands" class="jump_part">
       <div class="item">
         <div class="in-item  my-item">
