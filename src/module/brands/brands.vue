@@ -6,12 +6,14 @@
             <li v-for="item in items">
                 <div>
                     <p class="b-img">
-                        <a href="brands.php?b_id=2">
-                            <img v-bind:src = item.brandsImg alt="">
+                        <a v-bind:href="item.brandsUrl">
+                            <img  v-bind:src ="item.brandsImg" alt="">
                         </a>
                     </p>
                     <p class="b-name">
-                        <a href="brands.php?b_id=2">{{item.brandsName}}</a>
+                      <a v-bind:href="item.brandsUrl">
+                          {{item.brandsName}}
+                        </a>
                     </p>
                 </div>
             </li>
@@ -27,8 +29,16 @@
         data() {
             return {
                 items: [
-                    {brandsName: '麦肯',brandsImg:'../../assets/img/about.jpg' },
-                    {brandsName: '蓝顿旭美' }
+                    {brandsName: '麦肯',brandsImg:'static/images/1464133902912161957.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: '蓝顿旭美',brandsImg:'static/images/1464133380387838103.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: '典发',brandsImg:'static/images/1464131729030369013.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: '达伟',brandsImg:'static/images/1464131621150210414.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: '路多萨',brandsImg:'static/images/1464133728131345859.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: 'mg',brandsImg:'static/images/1464133212250391412.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: '麦西恩',brandsImg:'static/images/1464131621150210414.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: '荷美尔',brandsImg:'static/images/1464133918021244284.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: '爱薯福',brandsImg:'static/images/1464133234297250681.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
+                    {brandsName: 'ligo',brandsImg:'static/images/1464133580775209681.png',brandsUrl:'http://www.emeixian.com/mobile/brands.php?b_id=2' },
                 ]
             }
 
@@ -45,6 +55,8 @@
         list-style none
         margin 0 auto
         padding 0
+        overflow hidden
+        padding-bottom 20px
         li
             width 50%
             padding 10px 0 0
