@@ -23,9 +23,6 @@
     <div v-if="showSidebar" class="sidebar-mask" @click="hiddenBar"></div>
   </div>
 </template>
-<style>
-  @import url('../../assets/css/bootstrap.min.css');
-</style>
 <style lang="stylus">
 
   body
