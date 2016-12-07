@@ -3,8 +3,8 @@
         <div class="header">
         </div>
 
-        <ul class="address_ul">
-            <li v-for="(item,index) in items" v-bind:class="{curr_li:select}" class="tab-link" @click="selectLi(index)">
+        <ul class="address_ul" >
+            <li v-for="(item,index) in items" v-bind:class="{active:index === selected}" class="tab-link" @click="choose(index)">
                 <div class="lt">
                     <p>
                         <span>收货人：<i>{{item.addressName}}</i></span>
@@ -43,14 +43,13 @@
                     {addressName: 'tagliatelle',addressTel:'15562697669',addressInfo:'山东省 济南市 历下区 甸新北路11号凝萌织坊' },
                     {addressName: 'sformato',addressTel:'13011740566',addressInfo:'大鹏房产联通营业厅' }
                 ],
-                show: false
+                selected: 0
             }
 
         },
         methods : {
-            selectLi(index) {
-               console.log( this.items[index]);
-
+            choose:function (index) {
+                this.selected = index
             },
             address() {
                 this.show = true
@@ -81,7 +80,7 @@
          padding 0
          margin 0
          list-style none
-         .curr_li
+         .active
             background-color #676F85!important
             color #fff
             .lt

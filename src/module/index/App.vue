@@ -24,7 +24,7 @@
   </div>
 </template>
 <style lang="stylus">
-
+  @import url('../../assets/css/bootstrap.min.css');
   body
     font-family Roboto, Helvetica, sans-serif
     font-size 15px
