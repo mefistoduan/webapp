@@ -4,7 +4,7 @@
         </div>
 
         <ul class="address_ul">
-            <li v-for="item in items" v-bind:class="{active:$index==0}" class="tab-link">
+            <li v-for="(item,index) in items" v-bind:class="{curr_li:select}" class="tab-link" @click="selectLi(index)">
                 <div class="lt">
                     <p>
                         <span>收货人：<i>{{item.addressName}}</i></span>
@@ -15,7 +15,7 @@
                     </p>
                 </div>
             </li>
-            <li @click='address()'>
+            <li @click='address()' class="btn btn-success">
                 添加新地址
             </li>
         </ul>
@@ -37,13 +37,21 @@
                     {addressName: 'pizza',addressTel:'15253135699',addressInfo:'山东济南历下区玉兰广场3号楼606' },
                     {addressName: 'spaghetti',addressTel:'15253135699',addressInfo:'山东泰安泰山区泰山路11号' },
                     {addressName: 'pasta',addressTel:'15253135699',addressInfo:'山东淄博张店区海盛水产市场：金晶大道与联通路交叉南100米（金晶大道239）' },
-                    {addressName: 'pasta',addressTel:'15253135699',addressInfo:'黑龙江哈尔滨通河县一个冬天冻得人想哭的城市15253135699' }
+                    {addressName: 'carpaccio',addressTel:'15253135699',addressInfo:'黑龙江哈尔滨通河县一个冬天冻得人想哭的城市15253135699' },
+                    {addressName: 'lasagne',addressTel:'15253135699',addressInfo:'山东省 济南市 历下区 文东街道 文化东路38-1号4号楼' },
+                    {addressName: 'risotto',addressTel:'18660809824',addressInfo:'山东省 济南市 历下区 解放路1-7号喜士多便利店' },
+                    {addressName: 'tagliatelle',addressTel:'15562697669',addressInfo:'山东省 济南市 历下区 甸新北路11号凝萌织坊' },
+                    {addressName: 'sformato',addressTel:'13011740566',addressInfo:'大鹏房产联通营业厅' }
                 ],
                 show: false
             }
 
         },
         methods : {
+            selectLi(index) {
+               console.log( this.items[index]);
+
+            },
             address() {
                 this.show = true
             },
@@ -63,7 +71,6 @@
 
 
 <style lang="stylus" scoped>
-    @import url('../../assets/css/bootstrap.min.css');
     body
         padding-top 5px
      .address_ul
@@ -74,6 +81,12 @@
          padding 0
          margin 0
          list-style none
+         .curr_li
+            background-color #676F85!important
+            color #fff
+            .lt
+                span
+                    color #fff
          li
             width 100%
             overflow hidden
@@ -102,8 +115,10 @@
                 s
                     float right
                     text-decoration none
-
-
+        .btn
+            color #fff!important
+            position fixed
+            bottom 0
 
 
 </style>
