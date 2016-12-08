@@ -15,12 +15,15 @@
                     </p>
                 </div>
             </li>
-            <li @click='address()' class="btn btn-success">
-                添加新地址
-            </li>
         </ul>
-        <modal title="添加新地址" :show.sync="show" @ok="ok" @cancel="cancel" cancelText="取消" okText="确定">
-           <!--todo添加新的地址-->
+        <button @click='address' class="btn btn-success">
+            添加新地址
+        </button>
+        <modal title="添加新地址" :show.sync="show" @ok="ok(model)" @cancel="cancel" cancelText="取消" okText="确定">
+            <input type="text" class="add_name" v-model="model.addressName">
+            <input type="text" class="add_tel" v-model="model.addressTel">
+            <input type="text" class="add_tel" v-model="model.addressInfo">
+            <button id="add_new_btn"></button>
         </modal>
         <div class="bottom">
         </div>
@@ -33,6 +36,11 @@
     export default {
         data() {
             return {
+                model: {
+                    addressName:'',
+                    addressTel:'',
+                    addressInfo:''
+                },
                 items: [
                     {addressName: 'pizza',addressTel:'15253135699',addressInfo:'山东济南历下区玉兰广场3号楼606' },
                     {addressName: 'spaghetti',addressTel:'15253135699',addressInfo:'山东泰安泰山区泰山路11号' },
@@ -43,10 +51,12 @@
                     {addressName: 'tagliatelle',addressTel:'15562697669',addressInfo:'山东省 济南市 历下区 甸新北路11号凝萌织坊' },
                     {addressName: 'sformato',addressTel:'13011740566',addressInfo:'大鹏房产联通营业厅' }
                 ],
-                selected: 0
+                selected: 0,
+                show:false
             }
 
         },
+
         methods : {
             choose:function (index) {
                 this.selected = index
@@ -54,8 +64,9 @@
             address() {
                 this.show = true
             },
-            ok() {
+            ok(model) {
                 this.show = false
+                this.items.push(model);
             },
             cancel() {
                 this.show = false
@@ -115,6 +126,7 @@
                     float right
                     text-decoration none
         .btn
+            width 100%
             color #fff!important
             position fixed
             bottom 0
