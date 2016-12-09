@@ -56,7 +56,6 @@
         </div>
       </div>
       </router-link>
-
       <div class="item">
         <router-link to="/address" class="jump_part">
         <div class="in-item  my-item">
@@ -168,6 +167,7 @@
         </div>
     </div>
   </div>
+
 </div>
 </template>
 
@@ -185,6 +185,7 @@
 
 
 <style lang="stylus" scoped>
+  @import url('../../assets/css/bootstrap.min.css');
   .about
     overflow hidden
     z-index 2
