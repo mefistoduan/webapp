@@ -11,6 +11,7 @@ import infoAddressList from '../module/addressList/info.vue'
 import brands from '../module/brands/brands.vue'
 import address from '../module/address/address.vue'
 import coupon from '../module/coupon/coupon.vue'
+import myFocus from '../module/myFocus/myFocus.vue'
 
 export default new Router({
   mode: 'history',
@@ -32,6 +33,7 @@ export default new Router({
     { path: '/About', component: About },
     { path: '/address', component: address },
     { path: '/coupon', component: coupon },
+    { path: '/myFocus', component: myFocus },
     { path: '/AddressList', redirect: '/AddressList' }
   ]
 })
