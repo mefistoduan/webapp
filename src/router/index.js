@@ -10,6 +10,7 @@ import addAddressList from '../module/addressList/add.vue'
 import infoAddressList from '../module/addressList/info.vue'
 import brands from '../module/brands/brands.vue'
 import address from '../module/address/address.vue'
+import coupon from '../module/coupon/coupon.vue'
 
 export default new Router({
   mode: 'history',
@@ -30,6 +31,7 @@ export default new Router({
     { path: '/brands',component: brands  },
     { path: '/About', component: About },
     { path: '/address', component: address },
+    { path: '/coupon', component: coupon },
     { path: '/AddressList', redirect: '/AddressList' }
   ]
 })

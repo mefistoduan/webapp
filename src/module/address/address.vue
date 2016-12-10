@@ -20,14 +20,12 @@
             添加新地址
         </button>
         <modal title="添加新地址" :show.sync="show" @ok="ok(model)" @cancel="cancel" cancelText="取消" okText="确定">
-            <input type="text" class="add_name" v-model="model.addressName">
-            <input type="text" class="add_tel" v-model="model.addressTel">
-            <input type="text" class="add_tel" v-model="model.addressInfo">
-            <button id="add_new_btn"></button>
+            <input type="text" class="add_name form-control " v-model="model.addressName" placeholder="姓名">
+            <input type="text" class="add_tel form-control" v-model="model.addressTel" placeholder="电话">
+            <input type="text" class="add_address form-control" v-model="model.addressInfo" placeholder='详细地址'>
         </modal>
         <div class="bottom">
         </div>
-    </div>
     </div>
 </template>
 
@@ -89,6 +87,7 @@
          display block
          overflow scroll
          padding 0
+         padding-bottom 30px
          margin 0
          list-style none
          .active
@@ -130,6 +129,12 @@
             color #fff!important
             position fixed
             bottom 0
+        .add_tel
+            margin-top 10px
+            margin-bottom 10px
+        .form-control
+            color #000
+            font-weight bold
 
 
 </style>

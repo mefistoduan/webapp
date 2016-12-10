@@ -89,6 +89,7 @@
         </div>
       </div>
       <div class="item">
+        <router-link to="/coupon" class="jump_part">
         <div class="in-item  my-item">
           <div class="couponIn-icon w-18">
             <i class="glyphicon glyphicon-bookmark"></i>
@@ -102,6 +103,7 @@
             </div>
           </div>
         </div>
+        </router-link>
       </div>
       <div class="item">
         <div class="in-item  my-item">
