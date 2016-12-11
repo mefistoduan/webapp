@@ -4,7 +4,7 @@
       <div class="inner">
         <button class="logo btn btn-success btn-md" alt="logo" @click="showBar"><i class="glyphicon glyphicon-align-justify"></i></button>
         <form action="" class="bs-example bs-example-form">
-        <div class="input-group col-xs-8 search_part">
+        <div class="input-group col-xs-7 search_part">
           <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
           <input type="text" class="form-control" placeholder="试试薯条+奶酪">
           <submit class="input-group-addon">搜索</submit>
@@ -29,7 +29,7 @@
     font-family Roboto, Helvetica, sans-serif
     font-size 15px
     margin 0
-    padding-top 75px
+    padding-top 65px
 
   a
     color #34495e

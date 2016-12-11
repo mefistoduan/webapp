@@ -1,5 +1,5 @@
 <template>
-    <div class="brands">
+    <div class="myFocus">
         <div class="header">
         </div>
         <ul class="myattention-productlist">
