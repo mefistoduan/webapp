@@ -123,6 +123,7 @@
         </router-link>
       </div>
       <div class="item">
+        <router-link to="/topic-verify" class="jump_part">
         <div class="in-item  my-item">
           <div class="couponIn-icon w-18">
             <i class="glyphicon glyphicon-list-alt"></i>
@@ -136,6 +137,7 @@
             </div>
           </div>
         </div>
+        </router-link>
       </div>
       <div class="item">
         <div class="in-item  my-item">
@@ -153,6 +155,7 @@
         </div>
       </div>
       <div class="item">
+        <router-link to="/help" class="jump_part">
         <div class="in-item  my-item">
           <div class="couponIn-icon w-18">
             <i class="glyphicon glyphicon-bullhorn"></i>
@@ -166,6 +169,7 @@
             </div>
           </div>
         </div>
+        </router-link>
       </div>
         <div class="bottom">
         </div>

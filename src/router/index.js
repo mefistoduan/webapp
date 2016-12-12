@@ -13,6 +13,7 @@ import address from '../module/address/address.vue'
 import coupon from '../module/coupon/coupon.vue'
 import myFocus from '../module/myFocus/myFocus.vue'
 import topicVerify from '../module/topic/topic-verify.vue'
+import help from '../module/topic/help.vue'
 
 export default new Router({
   mode: 'history',
@@ -35,6 +36,7 @@ export default new Router({
     { path: '/address', component: address },
     { path: '/coupon', component: coupon },
     { path: '/myFocus', component: myFocus },
+    { path: '/help', component: help },
     { path: '/AddressList', redirect: '/AddressList' },
     { path: '/topic-verify', component: topicVerify }
   ]
