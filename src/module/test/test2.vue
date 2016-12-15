@@ -2,13 +2,11 @@
     <div class="brands">
         <div class="header">
         </div>
-        <ul class="wap_brand">
             <b-carousel :interval="3000" :controls="true" :indicators="true">
                 <b-slide v-for="item in items">
                     <img v-bind:src="item.brandsImg">
                 </b-slide>
             </b-carousel>
-        </ul>
         <div class="bottom" @click="see(alert)">
         </div>
     </div>
@@ -48,19 +46,18 @@
     @import url('../../assets/css/bootstrap.min.css')
     body
         padding-top 5px
-        ul
+    .carousel
+        width 100%
+        height 400px
+        overflow hidden
+        padding 0
+        margin 0
+        img
+            width 100%
+            height 100%
             padding 0
             margin 0
-            .carousel
-                width 100%
-                height 400px
-                overflow hidden
-                padding 0
-                margin 0
-                img
-                    padding 0
-                    margin 0
-                .carousel-control
-                    padding 0
-                    margin 0
+        .carousel-control
+            padding 0
+            margin-right 0
 </style>
