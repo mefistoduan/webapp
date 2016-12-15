@@ -3,7 +3,7 @@
         <div class="header">
         </div>
         <ul class="wap_brand">
-           <button @click="open(alert)">alert</button>
+            <b-btn size="md" variant="primary" @click="open()">Primary</b-btn>
             <b-alert :show="showVariable" :state="state" dismissible>
                 This is an alert
             </b-alert>
@@ -29,7 +29,8 @@
 
         },
         methods: {
-            open:function (alert) {
+            open:function () {
+               this.showVariable = false
                this.showVariable = true
             }
         },

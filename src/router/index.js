@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
+import BootstrapVue from 'bootstrap-vue'
 
 Vue.use(Router)
 
@@ -15,6 +16,7 @@ import myFocus from '../module/myFocus/myFocus.vue'
 import topicVerify from '../module/topic/topic-verify.vue'
 import help from '../module/topic/help.vue'
 import test from '../module/test/test.vue'
+import test2 from '../module/test/test2.vue'
 
 export default new Router({
   mode: 'history',
@@ -39,6 +41,7 @@ export default new Router({
     { path: '/myFocus', component: myFocus },
     { path: '/help', component: help },
     { path: '/test', component: test },
+    { path: '/test2', component: test2 },
     { path: '/AddressList', redirect: '/AddressList' },
     { path: '/topic-verify', component: topicVerify }
   ]
