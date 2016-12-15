@@ -14,6 +14,7 @@ import address from '../module/address/address.vue'
 import coupon from '../module/coupon/coupon.vue'
 import myFocus from '../module/myFocus/myFocus.vue'
 import topicVerify from '../module/topic/topic-verify.vue'
+import topicLoan from '../module/topic/topic-loan.vue'
 import help from '../module/topic/help.vue'
 import test from '../module/test/test.vue'
 import test2 from '../module/test/test2.vue'
@@ -40,6 +41,7 @@ export default new Router({
     { path: '/coupon', component: coupon },
     { path: '/myFocus', component: myFocus },
     { path: '/help', component: help },
+    { path: '/topicLoan', component: topicLoan },
     { path: '/test', component: test },
     { path: '/test2', component: test2 },
     { path: '/AddressList', redirect: '/AddressList' },

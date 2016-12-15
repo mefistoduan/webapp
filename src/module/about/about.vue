@@ -140,6 +140,7 @@
         </router-link>
       </div>
       <div class="item">
+        <router-link to="/topicLoan" class="jump_part">
         <div class="in-item  my-item">
           <div class="couponIn-icon w-18">
             <i class="glyphicon glyphicon-yen"></i>
@@ -153,6 +154,7 @@
             </div>
           </div>
         </div>
+        </router-link>
       </div>
       <div class="item">
         <router-link to="/help" class="jump_part">
