@@ -13,7 +13,6 @@
                     {text: '麦肯',brandsImg:'static/images/2401_P_1460653361322.jpg' },
                     {text: '麦肯',brandsImg:'static/images/2724_P_1470597064231.jpg' }
                 ],
-                showVariable:false
             }
 
         },
