@@ -2,7 +2,6 @@
     <div class="cart">
             <div class="title_jn">
                 <div class="weui_cell_hd meixian_self_item check_item" alt="1">
-                    <input type="checkbox" v-bind:click="changeChecked(-1,this.allchecked)" name="good[]" v-bind:value="id">Select All
                 </div>
                 <i class="line"></i>
             </div>
@@ -10,40 +9,31 @@
                 <li >
                     <div class="weui_cell_hd meixian_self_item city_qd_item check_item goods_checkbox_item" alt="1">
                         <input type="checkbox" class="weui_check" checked="checked" name="rec_id[]" value="795337">
-                        <i class="weui_icon_checked checked"></i>
                     </div>
                     <div class="li_warp">
-                        <a href="goods.php?id=1558"> <img src="/images/201602/thumb_img/1558_thumb_G_1454287961453.jpg" alt=""></a>
+                        <a href="goods.php?id=1558"> <img src="../../../static/images/289_P_1451863294067.jpg" alt=""></a>
                         <p class="goods_name"><a href="goods.php?id=1558">辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱</a></p>
                         <span class="unite">单袋</span>
                         <p class="price_container">
                             <s class="price" alt="37.40">￥37.40</s>
-                            <s class="delete"></s>
+                            <s class="delete">X</s>
                         </p>
                         <div class="calc_num">
-                            <a class="btn_reduce"></a>
+                            <a class="btn_reduce">-</a>
                             <input name="number" type="text" class="text" value="1">
                             <input type="hidden" name="miaosha_attr" value="">
-                            <a class="btn_add"></a>
+                            <a class="btn_add">+</a>
                         </div>
                     </div>
                 </li>
             </ul>
     </div>
-    </div>
 </template>
 
 <script>
-//    import Vue from 'vue'
-//    import BootstrapVue from 'bootstrap-vue'
-//    Vue.use(BootstrapVue)
     export default {
         data () {
             return {
-                allchecked: false,
-                showRight: false,
-                showTop: false,
-                val: '',
                 items: [
                     {message: 'Apple',checked:false},
                     {message: 'Peach',checked:false},
@@ -53,21 +43,8 @@
             }
         },
         methods: {
-            changeChecked:function(i,c) {
-                if(i<0){
-                    this.allchecked=!this.allchecked
-                    that=this
-                    this.items.forEach(function(i){
-                        i.checked=that.allchecked
-                    })
-                }else{
-                    this.items[i].checked=!this.items[i].checked
-                }
-            }
         },
         components: {
-            vSelect: VueStrap.select,
-            vOption: VueStrap.option
         }
     }
 </script>
@@ -76,6 +53,7 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
     body
         padding-top 5px
+        padding-left 0
         img
             margin 0
             padding 0
@@ -94,13 +72,22 @@
             overflow hidden
             display block
             margin 0 auto
+            padding-left 0
             padding-bottom 1em
             li
                 width 100%
                 height 11.8rem
                 display block
+                a
+                    float left
+                .goods_checkbox_item
+                    width 10px
+                    height 100%
+                    margin-left 5px
+                    margin-top 50px
+                    float left
                 .li_warp
-                    width 98%
+                    width 95%
                     height 100%
                     float right
                     border-bottom 1px solid #eee
@@ -153,14 +140,16 @@
                         height 16px
                         margin-top 0.7em
                         font-family "Microsoft Yahei"
-                        font-size 1.5rem
+                        font-size 16px
                         float left
-                        line-height 3.5rem
+                        line-height 16px
+                        text-align center
                         margin-left 0.5rem
                         cursor pointer
                         background red
                         color #fff
                         text-decoration none
+                        border-radius 25px
                     .calc_num 
                         max-width 10.625rem
                         height 1.875rem
@@ -172,7 +161,18 @@
                             width 24px
                             height 30px
                             float left
-
+                            border 1px solid #ddd
+                            text-align center
+                            line-height 30px
+                            text-decoration none
+                        .btn_add
+                            width 24px
+                            height 30px
+                            float left
+                            border 1px solid #ddd
+                            text-align center
+                            line-height 30px
+                            text-decoration none
                         input.text 
                             width 40px
                             height 30px
