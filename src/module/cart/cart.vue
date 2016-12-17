@@ -1,11 +1,9 @@
 <template>
     <div class="cart">
             <div class="title_jn">
-                <div class="weui_cell_hd meixian_self_item city_qd_all check_item" alt="1">
-                    <input type="checkbox" class="weui_check" name="checkbox1" checked="checked">
-                    <i class="weui_icon_checked checked"></i>
+                <div class="weui_cell_hd meixian_self_item check_item" alt="1">
+                    <input type="checkbox" v-bind:click="changeChecked(-1,this.allchecked)" name="good[]" v-bind:value="id">Select All
                 </div>
-                <span>全选</span>
                 <i class="line"></i>
             </div>
             <ul class="list">
@@ -40,25 +38,36 @@
 //    import BootstrapVue from 'bootstrap-vue'
 //    Vue.use(BootstrapVue)
     export default {
-        data() {
+        data () {
             return {
+                allchecked: false,
+                showRight: false,
+                showTop: false,
+                val: '',
                 items: [
-                    {text: '麦肯',brandsImg:'static/images/289_P_1451863294067.jpg' },
-                    {text: '麦肯',brandsImg:'static/images/2143_P_1449091000718.jpg' },
-                    {text: '麦肯',brandsImg:'static/images/2401_P_1460653361322.jpg' },
-                    {text: '麦肯',brandsImg:'static/images/2724_P_1470597064231.jpg' }
-                ],
-                showVariable:false
+                    {message: 'Apple',checked:false},
+                    {message: 'Peach',checked:false},
+                    {message: 'Orange',checked:false},
+                    {message: 'Pear',checked:false}
+                ]
             }
-
         },
         methods: {
-            open:function () {
-               this.showVariable = false
-               this.showVariable = true
+            changeChecked:function(i,c) {
+                if(i<0){
+                    this.allchecked=!this.allchecked
+                    that=this
+                    this.items.forEach(function(i){
+                        i.checked=that.allchecked
+                    })
+                }else{
+                    this.items[i].checked=!this.items[i].checked
+                }
             }
         },
         components: {
+            vSelect: VueStrap.select,
+            vOption: VueStrap.option
         }
     }
 </script>
@@ -80,9 +89,6 @@
                 margin-left 10px
                 margin-right 10px
                 float left
-            span
-                font-size 1.75em
-                line-height 5.375em
         .list
             width 100%
             overflow hidden
@@ -105,5 +111,80 @@
                         margin-top 1rem
                         margin-right 10px
                         border 1px solid #eee
+                    .goods_name
+                        padding-top 0.5rem
+                        height 2.6em
+                        font-family "Microsoft Yahei"
+                        font-size 1.5rem
+                        color rgb(101, 101, 101)
+                        line-height 1.3em
+                        overflow hidden
+                    .unite
+                        width 60%
+                        height 1.2rem
+                        font-family "Microsoft Yahei"
+                        font-size 1.25rem
+                        color rgb(153, 153, 153)
+                        line-height 1.2rem
+                        float left
+                        display block
+                    .price_container 
+                        width 60%
+                        height 3.2em
+                        display block
+                        margin 0
+                        padding 0
+                        float left
+                    
+                        .price 
+                            max-width 49%
+                            height 100%
+                            display block
+                            font-family "Microsoft Yahei"
+                            font-size 1.5rem
+                            color rgb(51, 51, 51)
+                            float left
+                            line-height 3.5rem
+                            font-weight bold
+                            text-decoration none
+                        
+                    .delete 
+                        width 16px
+                        height 16px
+                        margin-top 0.7em
+                        font-family "Microsoft Yahei"
+                        font-size 1.5rem
+                        float left
+                        line-height 3.5rem
+                        margin-left 0.5rem
+                        cursor pointer
+                        background red
+                        color #fff
+                        text-decoration none
+                    .calc_num 
+                        max-width 10.625rem
+                        height 1.875rem
+                        display block
+                        float left
+                        margin-right 0.5rem
+                    
+                        .btn_reduce 
+                            width 24px
+                            height 30px
+                            float left
 
+                        input.text 
+                            width 40px
+                            height 30px
+                            float left
+                            display inline-block
+                            box-sizing border-box
+                            border 1px solid #dddddd
+                            border-left none
+                            border-right none
+                            text-align center
+                            color #E3462C
+                            -webkit-appearance none
+                            border-radius 0
+                        
 </style>
