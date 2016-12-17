@@ -15,7 +15,6 @@ import myFocus from '../module/myFocus/myFocus.vue'
 import topicVerify from '../module/topic/topic-verify.vue'
 import topicLoan from '../module/topic/topic-loan.vue'
 import help from '../module/topic/help.vue'
-import test from '../module/test/test.vue'
 import detail from '../module/detail/detail.vue'
 import cart from '../module/cart/cart.vue'
 
@@ -42,7 +41,6 @@ export default new Router({
     { path: '/myFocus', component: myFocus },
     { path: '/help', component: help },
     { path: '/topicLoan', component: topicLoan },
-    { path: '/test', component: test },
     { path: '/detail', component: detail },
     { path: '/cart', component: cart },
     { path: '/AddressList', redirect: '/AddressList' },
