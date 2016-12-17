@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import BootstrapVue from 'bootstrap-vue'
 
 Vue.use(Router)
 
@@ -17,7 +16,8 @@ import topicVerify from '../module/topic/topic-verify.vue'
 import topicLoan from '../module/topic/topic-loan.vue'
 import help from '../module/topic/help.vue'
 import test from '../module/test/test.vue'
-import test2 from '../module/test/test2.vue'
+import detail from '../module/detail/detail.vue'
+import cart from '../module/cart/cart.vue'
 
 export default new Router({
   mode: 'history',
@@ -43,7 +43,8 @@ export default new Router({
     { path: '/help', component: help },
     { path: '/topicLoan', component: topicLoan },
     { path: '/test', component: test },
-    { path: '/test2', component: test2 },
+    { path: '/detail', component: detail },
+    { path: '/cart', component: cart },
     { path: '/AddressList', redirect: '/AddressList' },
     { path: '/topic-verify', component: topicVerify }
   ]

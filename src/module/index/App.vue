@@ -24,7 +24,6 @@
   </div>
 </template>
 <style lang="stylus">
-  @import url('../../assets/css/bootstrap.min.css');
   body
     font-family Roboto, Helvetica, sans-serif
     font-size 15px
@@ -60,7 +59,7 @@
       vertical-align middle
       font-weight 300
       letter-spacing .075em
-      margin-right 1.8em
+      /*margin-right 1.8em*/
       &:hover
         color #fff
       &.router-link-active
