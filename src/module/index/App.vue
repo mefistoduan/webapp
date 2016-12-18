@@ -7,7 +7,7 @@
         <div class="input-group col-xs-7 search_part">
           <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
           <input type="text" class="form-control" placeholder="试试薯条+奶酪">
-          <submit class="input-group-addon">搜索</submit>
+          <submit class="input-group-addon" name='serach_btn'>搜索</submit>
         </div>
         </form>
         <router-link to="/About"><button class="btn btn-success btn-md"><i class="glyphicon glyphicon-user"></i></button></router-link>
@@ -23,6 +23,12 @@
     <div v-if="showSidebar" class="sidebar-mask" @click="hiddenBar"></div>
   </div>
 </template>
+<script>
+    export default {
+      components: {
+        }
+      }
+</script>
 <style lang="stylus">
   body
     font-family Roboto, Helvetica, sans-serif
