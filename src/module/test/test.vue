@@ -11,7 +11,6 @@
         <div class="bottom" @click="see(alert)">
         </div>
     </div>
-    </div>
 </template>
 
 <script>

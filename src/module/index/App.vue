@@ -24,8 +24,10 @@
   </div>
 </template>
 <script>
+import EgdSideBar from 'sidebar'
     export default {
       components: {
+      EgdSideBar
         }
       }
 </script>

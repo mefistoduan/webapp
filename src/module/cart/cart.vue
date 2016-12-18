@@ -6,45 +6,109 @@
                 <i class="line"></i>
             </div>
             <ul class="list">
-                <li >
+
+                <li v-for="(item, index) in items">
                     <div class="weui_cell_hd meixian_self_item city_qd_item check_item goods_checkbox_item" alt="1">
-                        <input type="checkbox" class="weui_check" checked="checked" name="rec_id[]" value="795337">
+                        <input type="checkbox" class="weui_check" checked="checked" name="rec_id[]" v-bind:value="item.goodsId">
                     </div>
                     <div class="li_warp">
-                        <a href="goods.php?id=1558"> <img src="../../../static/images/289_P_1451863294067.jpg" alt=""></a>
-                        <p class="goods_name"><a href="goods.php?id=1558">辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱</a></p>
-                        <span class="unite">单袋</span>
+                        <a v-bind:href="item.goodsUrl"> <img v-bind:src="item.goodsImg" alt=""></a>
+                        <p class="goods_name"><a v-bind:href="item.goodsUrl">{{item.goodsName}}</a></p>
+                        <span class="unite">{{item.goodsUnit}}</span>
                         <p class="price_container">
-                            <s class="price" alt="37.40">￥37.40</s>
-                            <s class="delete">X</s>
+                            <s class="price" alt="37.40">￥{{item.goodsPrice}}</s>
+                            <s class="delete"  @click="deleteItem(index)">X</s>
                         </p>
                         <div class="calc_num">
-                            <a class="btn_reduce">-</a>
-                            <input name="number" type="text" class="text" value="1">
+                            <a class="btn_reduce" @click="reduce(index)">-</a>
+                            <input name="number" type="text" class="text" v-bind:value="item.goodsNum">
                             <input type="hidden" name="miaosha_attr" value="">
-                            <a class="btn_add">+</a>
+                            <a class="btn_add" @click="add(index)">+</a>
                         </div>
                     </div>
                 </li>
             </ul>
+        <div id='sumAllContainer'>
+            <em></em>
+            <button type="submit" class="submit"><i>去结算（<span>{{sumNum}}</span>件）</i></button>
+            <p>
+                <span class="sub">总计不含运费</span>
+                <span class="sum">￥<i class="sum_value">{{sumPrice}}</i></span>
+            </p>
+        </div>
+        <modal title="提醒" :show.sync="show" @ok="ok(index)" @cancel="cancel" cancelText="取消" okText="确定">
+            <p>是否删除该产品？</p>
+        </modal>
     </div>
 </template>
 
 <script>
+    import Modal from '../../components/modal/modal.vue'
+    import Vue from 'vue'
     export default {
         data () {
             return {
+             model: {
+                    goodsId:'',
+                },
                 items: [
-                    {message: 'Apple',checked:false},
-                    {message: 'Peach',checked:false},
-                    {message: 'Orange',checked:false},
-                    {message: 'Pear',checked:false}
-                ]
+                    {goodsId: '795337',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795339',goodsName: '丽莎莉达牌意大利粉 丽歌制造 2.5kg/包 5包/箱',goodsUnit:'整箱',goodsPrice:'101.00',goodsNum:'2',goodsImg:'../../../static/images/2143_P_1449091000718.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '东古 蚝油 6kg/桶 2桶/箱',goodsUnit:'单桶',goodsPrice:'57.80',goodsNum:'1',goodsImg:'../../../static/images/2401_P_1460653361322.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '广味源 广味海鲜酱 255g/瓶 12瓶/箱',goodsUnit:'整箱',goodsPrice:'78.00',goodsNum:'1',goodsImg:'../../../static/images/2613_P_1464119690629.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '元盛 经典牛肉饼 1.8kg/袋（40片）4袋/箱',goodsUnit:'整箱',goodsPrice:'155.50',goodsNum:'1',goodsImg:'../../../static/images/2724_P_1470597064231.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '鼎丰 料酒王 500ml/瓶 12瓶/箱 ',goodsUnit:'单瓶',goodsPrice:'4.40',goodsNum:'11',goodsImg:'../../../static/images/3000_P_1473116647145.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'23',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                ],
+                show:false,
+                showVariable:false,
+                state:'warning',
+                sumPrice:375.00,
+                sumNum:8
             }
         },
         methods: {
+
+            deleteItem(index) {
+                this.show = true
+            },
+            ok(index) {
+                this.items.splice(index,1)
+                this.show = false
+            },
+            cancel() {
+                this.show = false
+            },
+            add:function(index) {
+                var n = this.items[index].goodsNum
+               if(n<20){
+                n++
+                }
+                else{
+                    n=20
+                    this.showVariable = false
+                    this.showVariable = true
+                }
+                this.items[index].goodsNum = n
+            },
+             reduce:function(index) {
+                var n = this.items[index].goodsNum
+               if(n>0){
+                n--
+                }
+                else{
+                    n=0
+                    this.showVariable = false
+                    this.showVariable = true
+                }
+                this.items[index].goodsNum = n
+                sumAll()
+            }
+
         },
         components: {
+        Modal
         }
     }
 </script>
@@ -76,13 +140,12 @@
             padding-bottom 1em
             li
                 width 100%
-                height 11.8rem
+                height 12.3rem
                 display block
                 a
                     float left
                 .goods_checkbox_item
                     width 10px
-                    height 100%
                     margin-left 5px
                     margin-top 50px
                     float left
@@ -186,5 +249,57 @@
                             color #E3462C
                             -webkit-appearance none
                             border-radius 0
-                        
+            .alert
+               position fixed
+               right 0
+               left 0
+               top 10%
+        #sumAllContainer
+            width 100%
+            height 6.125rem
+            display block
+            margin 0 auto
+            float left
+            background-color #F9F9FB
+            margin-top 2rem
+            button
+                width 11.25rem
+                height 4.625rem
+                float right
+                margin-top 1rem
+                margin-right 0.5rem
+                background-color #15AD35
+                border 1px solid #15AD35
+                border-radius 4px
+                outline none
+                color #fff
+                text-align center
+                line-height 3.625rem
+                font-family "Microsoft Yahei"
+                font-size 1.5rem
+            p
+                width 50%
+                max-width 80%
+                height 100%
+                float right
+                line-height 6.125rem
+                margin-right 1rem
+                .sub
+                    float left
+                    height  100%
+                    color #999999
+                    font-size 1.25rem
+                    line-height 6.125rem
+                .sum
+                    float left
+                    height 100%
+                    font-family Verdana
+                    font-weight bold
+                    color #333
+                    font-size 1.75rem
+                    i
+                    float right
+                    font-style normal
+                    margin-left 0.5em
+                    line-height 6.125rem
 </style>
