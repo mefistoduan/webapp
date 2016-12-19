@@ -1,15 +1,16 @@
 <template>
     <div class="cart">
             <div class="title_jn">
-                <div class="weui_cell_hd meixian_self_item check_item" alt="1">
-                </div>
-                <i class="line"></i>
+                <input type="checkbox" class="weui_check" v-bind:checked="shouldCheck"   name="rec_list" @click='choiceAll()'>
+                <p>全选</p>
             </div>
             <ul class="list">
-
+                <b-alert :show="showVariable" :state="state" dismissible>
+                    低于或高于限制数量
+                </b-alert>
                 <li v-for="(item, index) in items">
                     <div class="weui_cell_hd meixian_self_item city_qd_item check_item goods_checkbox_item" alt="1">
-                        <input type="checkbox" class="weui_check" checked="checked" name="rec_id[]" v-bind:value="item.goodsId">
+                        <input type="checkbox" class="weui_check" v-bind:checked="shouldCheck" name="rec_id[]" v-bind:value="item.goodsId">
                     </div>
                     <div class="li_warp">
                         <a v-bind:href="item.goodsUrl"> <img v-bind:src="item.goodsImg" alt=""></a>
@@ -30,7 +31,9 @@
             </ul>
         <div id='sumAllContainer'>
             <em></em>
-            <button type="submit" class="submit"><i>去结算（<span>{{sumNum}}</span>件）</i></button>
+            <router-link to="/coupon" class="jump_part">
+                <button type="submit" class="submit"><i>去结算（<span>{{sumNum}}</span>件）</i></button>
+            </router-link>
             <p>
                 <span class="sub">总计不含运费</span>
                 <span class="sum">￥<i class="sum_value">{{sumPrice}}</i></span>
@@ -45,6 +48,7 @@
 <script>
     import Modal from '../../components/modal/modal.vue'
     import Vue from 'vue'
+
     export default {
         data () {
             return {
@@ -59,17 +63,31 @@
                     {goodsId: '795337',goodsName: '元盛 经典牛肉饼 1.8kg/袋（40片）4袋/箱',goodsUnit:'整箱',goodsPrice:'155.50',goodsNum:'1',goodsImg:'../../../static/images/2724_P_1470597064231.jpg',goodsUrl:'goods.php?id=795337'},
                     {goodsId: '795337',goodsName: '鼎丰 料酒王 500ml/瓶 12瓶/箱 ',goodsUnit:'单瓶',goodsPrice:'4.40',goodsNum:'11',goodsImg:'../../../static/images/3000_P_1473116647145.jpg',goodsUrl:'goods.php?id=795337'},
                     {goodsId: '795337',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
-                    {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'23',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                    {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
                 ],
                 show:false,
                 showVariable:false,
                 state:'warning',
                 sumPrice:375.00,
-                sumNum:8
+                sumNum:43,
+                shouldCheck:'checked'
             }
         },
         methods: {
-
+            choiceAll:function(){
+                if(this.shouldCheck==''){
+                    this.shouldCheck='checked'
+                }else{
+                    this.shouldCheck=''
+                }
+            },
+            choiceItem(index) {
+                 if(this.shouldCheck==''){
+                    this.shouldCheck='checked'
+                }else{
+                    this.shouldCheck=''
+                }
+            },
             deleteItem(index) {
                 this.show = true
             },
@@ -82,8 +100,8 @@
             },
             add:function(index) {
                 var n = this.items[index].goodsNum
-               if(n<20){
-                n++
+                if(n<20){
+                    n++
                 }
                 else{
                     n=20
@@ -91,11 +109,30 @@
                     this.showVariable = true
                 }
                 this.items[index].goodsNum = n
+
+                var N = 0
+                var P = 0
+                for(var i=0;i<this.items.length;i++){
+                    if(this.shouldCheck=='checked'){
+                      N += parseInt(this.items[i].goodsNum);
+                    }
+
+                }
+                for(var i=0;i<this.items.length;i++){
+                    if(this.shouldCheck=='checked'){
+                    P += parseFloat(this.items[i].goodsNum)*parseFloat(this.items[i].goodsPrice);
+                    }
+                }
+
+                 this.sumNum = N
+                 this.sumPrice = P.toFixed(2)
+
+
             },
              reduce:function(index) {
                 var n = this.items[index].goodsNum
-               if(n>0){
-                n--
+                if(n>0){
+                    n--
                 }
                 else{
                     n=0
@@ -103,7 +140,17 @@
                     this.showVariable = true
                 }
                 this.items[index].goodsNum = n
-                sumAll()
+                this.sumNum  = 0
+                var N = 0
+                var P = 0
+                for(var i=0;i<this.items.length;i++){
+                    N += parseInt(this.items[i].goodsNum)
+                }
+                for(var i=0;i<this.items.length;i++){
+                    P += parseFloat(this.items[i].goodsNum)*parseFloat(this.items[i].goodsPrice);
+                }
+                 this.sumNum = N
+                 this.sumPrice = P.toFixed(2)
             }
 
         },
@@ -111,6 +158,7 @@
         Modal
         }
     }
+
 </script>
 
 
