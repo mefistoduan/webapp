@@ -1,8 +1,8 @@
 <template>
     <div class="cart">
             <div class="title_jn">
-                <input type="checkbox" class="weui_check" v-bind:checked="shouldCheck"   name="rec_list" @click='choiceAll()'>
-                <p>全选</p>
+                <input type="checkbox" class="shoppting-checkbox" v-bind:checked="shouldCheck"   name="rec_list" @click='choiceAll()'>
+                <p class="cart_title">全选</p>
             </div>
             <ul class="list">
                 <b-alert :show="showVariable" :state="state" dismissible>
@@ -10,7 +10,7 @@
                 </b-alert>
                 <li v-for="(item, index) in items">
                     <div class="weui_cell_hd meixian_self_item city_qd_item check_item goods_checkbox_item" alt="1">
-                        <input type="checkbox" class="weui_check" v-bind:checked="shouldCheck" name="rec_id[]" v-bind:value="item.goodsId">
+                        <input type="checkbox" class="shoppting-checkbox" v-bind:checked="shouldCheck" name="rec_id[]" v-bind:value="item.goodsId">
                     </div>
                     <div class="li_warp">
                         <a v-bind:href="item.goodsUrl"> <img v-bind:src="item.goodsImg" alt=""></a>
@@ -68,7 +68,7 @@
                 show:false,
                 showVariable:false,
                 state:'warning',
-                sumPrice:375.00,
+                sumPrice:'375.00',
                 sumNum:43,
                 shouldCheck:'checked'
             }
@@ -93,7 +93,18 @@
             },
             ok(index) {
                 this.items.splice(index,1)
+                var N = 0
+                var P = 0
+                for(var i=0;i<this.items.length;i++){
+                    N += parseInt(this.items[i].goodsNum)
+                }
+                for(var i=0;i<this.items.length;i++){
+                    P += parseFloat(this.items[i].goodsNum)*parseFloat(this.items[i].goodsPrice);
+                }
+                this.sumNum = N
+                this.sumPrice = P.toFixed(2)
                 this.show = false
+
             },
             cancel() {
                 this.show = false
@@ -109,25 +120,20 @@
                     this.showVariable = true
                 }
                 this.items[index].goodsNum = n
-
                 var N = 0
                 var P = 0
                 for(var i=0;i<this.items.length;i++){
                     if(this.shouldCheck=='checked'){
                       N += parseInt(this.items[i].goodsNum);
                     }
-
                 }
                 for(var i=0;i<this.items.length;i++){
                     if(this.shouldCheck=='checked'){
                     P += parseFloat(this.items[i].goodsNum)*parseFloat(this.items[i].goodsPrice);
                     }
                 }
-
                  this.sumNum = N
                  this.sumPrice = P.toFixed(2)
-
-
             },
              reduce:function(index) {
                 var n = this.items[index].goodsNum
@@ -152,7 +158,6 @@
                  this.sumNum = N
                  this.sumPrice = P.toFixed(2)
             }
-
         },
         components: {
         Modal
@@ -172,13 +177,18 @@
          ul， ol
             list-style none
         .title_jn
-            width 100%
-            height 5.375em
+            padding-left 10px
+            padding-top 20px
             .weui_cell_hd
                 margin-top 1.5em
                 margin-left 10px
                 margin-right 10px
                 float left
+        .cart_title
+            float left
+            font-size 20px
+            font-weight bold
+            margin-left 10px
         .list
             width 100%
             overflow hidden
@@ -314,8 +324,9 @@
                 width 11.25rem
                 height 4.625rem
                 float right
-                margin-top 1rem
+                vertical-align middle
                 margin-right 0.5rem
+                margin-top 10px
                 background-color #15AD35
                 border 1px solid #15AD35
                 border-radius 4px
@@ -350,4 +361,20 @@
                     font-style normal
                     margin-left 0.5em
                     line-height 6.125rem
+    .shoppting-checkbox
+        appearance none
+        -moz-appearance none
+        -webkit-appearance none
+        width 12px
+        height 20px
+        cursor pointer
+        background url(/static/images/checkbox.png) no-repeat 0px -36px
+        vertical-align middle
+        outline none
+        border none
+        float left
+    .shoppting-checkbox:checked
+        background url(/static/images/checkbox.png) no-repeat 0px 2px
+        outline none
+        border none
 </style>
