@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/npm-debug.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/module/empty/about.vue" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/about/about.vue" afterPath="$PROJECT_DIR$/src/module/about/about.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/address/address.vue" afterPath="$PROJECT_DIR$/src/module/address/address.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/brands/brands.vue" afterPath="$PROJECT_DIR$/src/module/brands/brands.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/coupon/coupon.vue" afterPath="$PROJECT_DIR$/src/module/coupon/coupon.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/detail/detail.vue" afterPath="$PROJECT_DIR$/src/module/detail/detail.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/myFocus/myFocus.vue" afterPath="$PROJECT_DIR$/src/module/myFocus/myFocus.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/topic/help.vue" afterPath="$PROJECT_DIR$/src/module/topic/help.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/topic/topic-loan.vue" afterPath="$PROJECT_DIR$/src/module/topic/topic-loan.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/topic/topic-verify.vue" afterPath="$PROJECT_DIR$/src/module/topic/topic-verify.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/cart/cart.vue" afterPath="$PROJECT_DIR$/src/module/cart/cart.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,12 +29,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="about.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/module/empty/about.vue">
+      <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="10" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="44" />
+            <state relative-caret-position="153">
+              <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="254">
+              <caret line="154" column="23" lean-forward="false" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="23" />
+              <folding>
+                <element signature="e#2416#2468#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -60,6 +65,7 @@
     </findStrings>
     <replaceStrings>
       <replace>shoppting-checkbox</replace>
+      <replace>let</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -71,9 +77,7 @@
         <option value="$PROJECT_DIR$/src/module/index/App.vue" />
         <option value="$PROJECT_DIR$/src/module/index/index.html" />
         <option value="$PROJECT_DIR$/src/module/test/test2.vue" />
-        <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_christmas_delear.dwt" />
-        <option value="$PROJECT_DIR$/src/module/cart/cart.vue" />
         <option value="$PROJECT_DIR$/src/module/empty/about.vue" />
         <option value="$PROJECT_DIR$/src/module/detail/detail.vue" />
         <option value="$PROJECT_DIR$/src/module/topic/help.vue" />
@@ -84,6 +88,10 @@
         <option value="$PROJECT_DIR$/src/module/coupon/coupon.vue" />
         <option value="$PROJECT_DIR$/src/module/myFocus/myFocus.vue" />
         <option value="$PROJECT_DIR$/src/module/brands/brands.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="//192.168.10.214/php/phptest/emeixian/admin/templates/addressedit.htm" />
+        <option value="$PROJECT_DIR$/src/module/checkout/checkout.vue" />
+        <option value="$PROJECT_DIR$/src/module/cart/cart.vue" />
       </list>
     </option>
   </component>
@@ -227,12 +235,12 @@
       <updated>1481943761394</updated>
       <workItem from="1481943762832" duration="15779000" />
       <workItem from="1482217939212" duration="3087000" />
-      <workItem from="1482288252967" duration="337000" />
+      <workItem from="1482288252967" duration="3087000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19203000" />
+    <option name="totallyTimeSpent" value="21953000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -381,13 +389,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="11" lean-forward="false" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/sidebar/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -457,16 +458,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="307">
           <caret line="705" column="17" lean-forward="false" selection-start-line="705" selection-start-column="17" selection-end-line="705" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#2515#7603#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -547,6 +538,48 @@
         <state relative-caret-position="374">
           <caret line="22" column="10" lean-forward="false" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="20" column="49" lean-forward="false" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:////192.168.10.214/php/phptest/emeixian/admin/templates/addressedit.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="184" column="11" lean-forward="true" selection-start-line="184" selection-start-column="11" selection-end-line="184" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:////192.168.10.214/php/phptest/emeixian/admin/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-680">
+          <caret line="1984" column="17" lean-forward="false" selection-start-line="1984" selection-start-column="17" selection-end-line="1984" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="17" lean-forward="true" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="154" column="23" lean-forward="false" selection-start-line="154" selection-start-column="20" selection-end-line="154" selection-end-column="23" />
+          <folding>
+            <element signature="e#2416#2468#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

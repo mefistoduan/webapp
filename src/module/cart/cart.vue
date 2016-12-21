@@ -110,7 +110,7 @@
                 this.show = false
             },
             add:function(index) {
-                var n = this.items[index].goodsNum
+                let n = this.items[index].goodsNum
                 if(n<20){
                     n++
                 }
@@ -120,14 +120,14 @@
                     this.showVariable = true
                 }
                 this.items[index].goodsNum = n
-                var N = 0
-                var P = 0
-                for(var i=0;i<this.items.length;i++){
+                let N = 0
+                let P = 0
+                for(let i=0;i<this.items.length;i++){
                     if(this.shouldCheck=='checked'){
                       N += parseInt(this.items[i].goodsNum);
                     }
                 }
-                for(var i=0;i<this.items.length;i++){
+                for(let i=0;i<this.items.length;i++){
                     if(this.shouldCheck=='checked'){
                     P += parseFloat(this.items[i].goodsNum)*parseFloat(this.items[i].goodsPrice);
                     }
@@ -136,7 +136,7 @@
                  this.sumPrice = P.toFixed(2)
             },
              reduce:function(index) {
-                var n = this.items[index].goodsNum
+                let n = this.items[index].goodsNum
                 if(n>0){
                     n--
                 }
@@ -147,12 +147,12 @@
                 }
                 this.items[index].goodsNum = n
                 this.sumNum  = 0
-                var N = 0
-                var P = 0
-                for(var i=0;i<this.items.length;i++){
+                let N = 0
+                let P = 0
+                for(let i=0;i<this.items.length;i++){
                     N += parseInt(this.items[i].goodsNum)
                 }
-                for(var i=0;i<this.items.length;i++){
+                for(let i=0;i<this.items.length;i++){
                     P += parseFloat(this.items[i].goodsNum)*parseFloat(this.items[i].goodsPrice);
                 }
                  this.sumNum = N
