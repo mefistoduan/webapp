@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" rel="stylesheet/scss">
 $offset = 126
 $duration = 1.4s
 

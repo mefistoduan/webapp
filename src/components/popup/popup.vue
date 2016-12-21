@@ -1,10 +1,10 @@
 <template>
     <div v-show="show" :transition="transition">
-        <div class="modal" @click.self="clickMask">
-            <div class="modal-dialog" :class="modalClass">
-                <div class="modal-content">
+        <div class="popup" @click.self="clickMask">
+            <div class="popup-dialog" :class="modalClass">
+                <div class="popup-content">
                     <!--Header-->
-                    <div class="modal-header">
+                    <div class="popup-header">
                         <slot name="header">
                             <a type="button" class="close" @click="cancel">x</a>
                             <h2 class="modal-title">
@@ -156,29 +156,51 @@
      };
 </script>
 
-<style scoped>
-    .modal {
+<style scoped rel="stylesheet/stylus">
+    .popup {
         display: block;
+        position: fixed;
+        top: 50%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1050;
+        overflow: hidden;
+        -webkit-overflow-scrolling: touch;
+        outline: 0;
+    }
+    .popup  h2 {
+        font-size:16px
     }
     .modal-transition {
         transition: all .6s ease;
     }
+    .popup-content {
+        position: relative;
+        bottom:0;
+        width:100%;
+        height:300px;
+        background-color: #fff;
+        outline: 0;
+        border:none;
+    }
     .modal-leave {
-        /* 样式没什么用，但可以让根标签的transitionEnd生效，以去掉modal-leave */
         border-radius: 1px !important;
     }
-    .modal-transition .modal-dialog, .modal-transition .modal-backdrop {
+    .modal-transition .popup-dialog, .modal-transition .modal-backdrop {
         transition: all .5s ease;
     }
-    .modal-enter .modal-dialog, .modal-leave .modal-dialog {
+    .modal-enter .popup-dialog, .modal-leave .popup-dialog {
         opacity: 0;
         transform: translateY(-30%);
     }
     .modal-enter .modal-backdrop, .modal-leave .modal-backdrop {
         opacity: 0;
     }
-    .modal-header {
+    .popup-header {
         padding: 15px 35px;
+        min-height: 16.43px;
+        border-bottom: 1px solid #e5e5e5;
     }
     .modal-body {
         padding: 15px 50px;

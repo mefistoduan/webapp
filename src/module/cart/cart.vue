@@ -31,7 +31,7 @@
             </ul>
         <div id='sumAllContainer'>
             <em></em>
-            <router-link to="/coupon" class="jump_part">
+            <router-link to="/checkout" class="jump_part">
                 <button type="submit" class="submit"><i>去结算（<span>{{sumNum}}</span>件）</i></button>
             </router-link>
             <p>

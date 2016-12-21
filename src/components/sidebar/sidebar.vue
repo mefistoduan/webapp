@@ -1,3 +1,4 @@
+<script src="../popup/index.js"></script>
 <template>
   <div class="sidebar-box" :class="{'show-sidebar':showSidebar}">
     <div class="swiper-slide">
