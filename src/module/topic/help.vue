@@ -151,7 +151,7 @@ mso-ansi-language:EN-US;mso-fareast-language:ZH-CN;mso-bidi-language:AR-SA">è¿è
 <script>
 
 </script>
-<style lang="stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus" scoped>
     body {
         background-color: #ff0000;
     }

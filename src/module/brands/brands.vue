@@ -47,7 +47,7 @@
 </script>
 
 
-<style lang="stylus" scoped>
+<style lang="stylus"  rel="stylesheet/stylus" scoped>
     body
         padding-top 5px
     .wap_brand

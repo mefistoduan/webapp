@@ -39,7 +39,7 @@
         }
     }
 </script>
-<style lang="stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus" scoped>
     body
         background-color:#ff0000
         .banner

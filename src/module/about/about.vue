@@ -196,7 +196,7 @@
 
 
 
-<style lang="stylus" scoped>
+<style lang="stylus" rel="stylesheet/stylus" scoped>
   @import url('../../assets/css/bootstrap.min.css');
   .about
     overflow hidden
