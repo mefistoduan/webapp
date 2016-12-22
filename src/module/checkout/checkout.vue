@@ -2,9 +2,11 @@
 <template>
 
   <div class="checkout">
-    <!--popup start-->
-    <popup title="选项" show.sync="show" @ok="ok(model)" @cancel="cancel"  cancelText="取消" okText="确定"></popup>
-    <!--popup end-->
+    <!--popup-->
+    <popup title="提醒" :show.sync="show" @ok="ok($index)" @cancel="cancel" cancelText="取消" okText="确定">
+    </popup>
+    <!--popup-->
+
     <div class="buyer_info" @click="showPopup()">
       <i class=" icon_local"></i>
       <div>
@@ -155,7 +157,7 @@
                     {goodsId: '795337',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
                     {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
                 ],
-                show:true
+                show:false
 
             }
         },

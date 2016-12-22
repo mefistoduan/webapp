@@ -2,8 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/app.b0bcf84af4876ff7648c3f8f590fa37a.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/app.b0bcf84af4876ff7648c3f8f590fa37a.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/components.9e73d2b9040359b2885ee7bfbd5f5024.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/components.9e73d2b9040359b2885ee7bfbd5f5024.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/app.c11dbcbcf852bcd6d6df.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/app.c11dbcbcf852bcd6d6df.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/components.175746098740844c8f24.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/components.175746098740844c8f24.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/element.406e79156ba796f07fa6.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/element.406e79156ba796f07fa6.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/manifest.efa4ed9f8bdfa96de7a7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/manifest.efa4ed9f8bdfa96de7a7.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/vendor.ee7b7a3fbfc8a1b1ced7.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/vendor.ee7b7a3fbfc8a1b1ced7.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/popup/popup.vue" afterPath="$PROJECT_DIR$/src/components/popup/popup.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/index.html" afterPath="$PROJECT_DIR$/assets/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/checkout/checkout.vue" afterPath="$PROJECT_DIR$/src/module/checkout/checkout.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -31,8 +45,8 @@
       <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -51,8 +65,8 @@
       <file leaf-file-name="myFocus.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/module/myFocus/myFocus.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="48" column="77" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="77" />
+            <state relative-caret-position="323">
+              <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -275,12 +289,12 @@
       <workItem from="1482217939212" duration="3087000" />
       <workItem from="1482288252967" duration="3719000" />
       <workItem from="1482296697039" duration="10095000" />
-      <workItem from="1482365800030" duration="15106000" />
+      <workItem from="1482365800030" duration="15420000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47786000" />
+    <option name="totallyTimeSpent" value="48100000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -615,6 +629,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -639,14 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/myFocus/myFocus.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="48" column="77" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/popup/popup.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -655,10 +662,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/myFocus/myFocus.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="34" column="56" lean-forward="true" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
