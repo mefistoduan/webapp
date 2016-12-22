@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/popup/popup.vue" afterPath="$PROJECT_DIR$/src/components/popup/popup.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/checkout/checkout.vue" afterPath="$PROJECT_DIR$/src/module/checkout/checkout.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,21 +28,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="476">
+              <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="popup.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="popup.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/popup/popup.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="357">
+              <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="myFocus.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/myFocus/myFocus.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="48" column="77" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="77" />
               <folding />
             </state>
           </provider>
@@ -50,11 +62,7 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>795337</find>
-      <find>, 微软雅黑</find>
-      <find>component</find>
       <find>weui_check</find>
-      <find>:</find>
       <find>.jump_list1 .sc_btn</find>
       <find>margin-top 1</find>
       <find>var</find>
@@ -64,6 +72,26 @@
       <find>modal-dialog</find>
       <find>.modal-content</find>
       <find>modal</find>
+      <find>:</find>
+      <find>meixian_self_list</find>
+      <find>weui_cell</find>
+      <find>iocn_more</find>
+      <find>.icon_warp</find>
+      <find>.icon_left</find>
+      <find>meixian_self_info</find>
+      <find>, &quot;å¾®è½¯é›…é»‘&quot;;</find>
+      <find>border</find>
+      <find>before</find>
+      <find>order_info</find>
+      <find>title</find>
+      <find>tax_info_btn</find>
+      <find>tax_info</find>
+      <find>all_info</find>
+      <find>pay_info</find>
+      <find>icon_balance</find>
+      <find>show</find>
+      <find>transition</find>
+      <find>showPopup</find>
     </findStrings>
     <replaceStrings>
       <replace>shoppting-checkbox</replace>
@@ -71,6 +99,7 @@
       <replace>show-popup</replace>
       <replace>popup</replace>
       <replace>popup-dialog</replace>
+      <replace>&lt;div class=&quot;weui_cell&quot;&gt;</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -101,8 +130,8 @@
         <option value="$PROJECT_DIR$/src/components/popup/index.js" />
         <option value="$PROJECT_DIR$/src/components/modal/modal.vue" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/user_content.dwt" />
-        <option value="$PROJECT_DIR$/src/module/checkout/checkout.vue" />
         <option value="$PROJECT_DIR$/src/components/popup/popup.vue" />
+        <option value="$PROJECT_DIR$/src/module/checkout/checkout.vue" />
       </list>
     </option>
   </component>
@@ -129,10 +158,8 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1034" />
+    <option name="width" value="1919" />
+    <option name="height" value="1018" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -248,12 +275,12 @@
       <workItem from="1482217939212" duration="3087000" />
       <workItem from="1482288252967" duration="3719000" />
       <workItem from="1482296697039" duration="10095000" />
-      <workItem from="1482365800030" duration="583000" />
+      <workItem from="1482365800030" duration="15106000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33263000" />
+    <option name="totallyTimeSpent" value="47786000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -265,7 +292,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1034" extended-state="1" />
+    <frame x="0" y="0" width="1919" height="1018" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18004338" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -497,13 +524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/myFocus/myFocus.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="96" column="44" lean-forward="false" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/module/brands/brands.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -565,6 +585,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="32" lean-forward="true" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -579,6 +600,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -617,18 +639,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
+    <entry file="file://$PROJECT_DIR$/src/module/myFocus/myFocus.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="204">
+          <caret line="48" column="77" lean-forward="false" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="77" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/popup/popup.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+        <state relative-caret-position="357">
+          <caret line="69" column="31" lean-forward="false" selection-start-line="69" selection-start-column="26" selection-end-line="69" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="149" column="35" lean-forward="true" selection-start-line="149" selection-start-column="35" selection-end-line="149" selection-end-column="35" />
           <folding />
         </state>
       </provider>

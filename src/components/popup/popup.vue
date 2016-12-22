@@ -67,7 +67,7 @@
             // 自定义组件transition
             transition: {
                 type: String,
-                default: 'modal'
+                default: 'popup'
             },
             // 确认按钮text
             okText: {
