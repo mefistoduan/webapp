@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="../../../../../wamp/www/emeixian/mobile/css/meixian_index.css">
+<script src="../../../../auto/build/dev-server.js"></script>
+<link rel="stylesheet" href="../../../../../wamp/www/emeixian/themes/68ecshopcom_360buy/css/shop_index.css">
 <script src="../../components/popup/index.js"></script>
 <template>
 
@@ -577,4 +580,20 @@
       line-height 3em
   .account,.tax_info_btn,.gary_text,.leave_message_info
     border none
+.weui_check
+  appearance none
+  -moz-appearance none
+  -webkit-appearance none
+  width 12px
+  height 20px
+  cursor pointer
+  background url(/static/images/checkbox.png) no-repeat 0px -36px
+  vertical-align middle
+  outline none
+  border none
+  float left
+.weui_check:checked
+  background url(/static/images/checkbox.png) no-repeat 0px 2px
+  outline none
+  border none
 </style>

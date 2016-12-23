@@ -45,7 +45,7 @@
             },
             title: {
                 type: String,
-                default: 'Modal'
+                default: 'popup'
             },
             small: {
                 type: Boolean,
