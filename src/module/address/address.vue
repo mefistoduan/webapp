@@ -2,7 +2,6 @@
     <div class="brands">
         <div class="header">
         </div>
-
         <ul class="address_ul" >
             <li v-for="(item,index) in items" v-bind:class="{active:index === selected}" class="tab-link" @click="choose(index)">
                 <div class="lt">

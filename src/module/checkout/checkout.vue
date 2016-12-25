@@ -6,15 +6,30 @@
 
   <div class="checkout">
     <!--popup-->
-    <popup title="提醒" :show.sync="show" @ok="ok($index)" @cancel="cancel" cancelText="取消" okText="确定">
+    <popup v-bind:title="popup.popupName" :show.sync="show" @ok="ok($index)" @cancel="cancel" cancelText="取消" okText="确定">
+      <div class="part" v-show='addressShow'>
+        <ul class="address_ul" >
+          <li v-for="(add,index) in address" v-bind:class="{active:index === selected}" class="tab-link" @click="choose(index)">
+            <div class="lt">
+              <p>
+                <span><i>{{add.addressName}}</i></span>
+                <s class="tel">{{add.addressTel}}</s>
+              </p>
+              <p class="address_detail">
+                {{add.addressInfo}}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
     </popup>
     <!--popup-->
 
-    <div class="buyer_info" @click="showPopup()">
+    <div class="buyer_info" @click="showPopup(addressPart)">
       <i class=" icon_local"></i>
       <div>
-        <h5> <i>张飞</i> <s>13526548695</s></h5>
-        <span>山东&nbsp;济南&nbsp;历下区&nbsp;玉兰广场3号楼606</span>
+        <h5> <i>{{receiveName}}</i> <s>{{receiveTel}}</s></h5>
+        <span>{{receiveInfo}}</span>
       </div>
     </div>
 
@@ -66,11 +81,11 @@
     <!--支付方式 start-->
     <div class="pay_info">
       <p class="title">支付方式</p>
-      <div class="weui_cell">
-        <i class="icon icon_balance"></i>
-        <span>余额支付</span>
+      <div class="weui_cell" v-for="(pay,index) in pays">
+        <i class="icon" v-bind:class='pay.payIcon'></i>
+        <span>{{pay.payName}}</span>
         <div class="weui_cell_ft" alt="0">
-          <input type="radio" name="payment" class="weui_check" value="1">
+          <input type="radio" name="payment" class="weui_check" value="1" v-bind:checked='{checked:index === 0}'>
           <span class="weui_icon_checked"></span>
         </div>
       </div>
@@ -135,14 +150,20 @@
     <div class="all_info">
       <a class="weui_cell gary_text">
         <span>最佳送货时间</span>
-        <span class="order_timer order_timer_curr">不限</span>
+        <input data-v-c7d06e48="" type="radio" name="payment" value="1" class="weui_check" checked=checked>
+        <span class="order_timer">不限</span>
+        <input data-v-c7d06e48="" type="radio" name="payment" value="1" class="weui_check">
         <span class="order_timer">上午</span>
+        <input data-v-c7d06e48="" type="radio" name="payment" value="1" class="weui_check">
         <span class="order_timer">下午</span>
-        <input type="hidden" id="order_start_timer" name="best_time" value="不限">
       </a>
     </div>
     <!--送货时间 end-->
 
+    <!--提交订单-->
+    <div class="submit_info">
+      <button class="submit_btn weui_btn_primary" type="submit">提交订单</button>
+    </div>
 </div>
 </template>
 
@@ -152,25 +173,55 @@
         data () {
             return {
                 popup: {
-                    addressName:'',
-                    addressTel:'',
-                    addressInfo:'',
+                    popupName:'提醒'
                 },
-                items: [
-                    {goodsId: '795337',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
-                    {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                pays: [
+                    {payName: '余额支付',payId: '01',payIcon:'icon_balance'},
+                    {payName: '微信扫码支付',payId: '02',payIcon:'icon_nativepay'},
+                    {payName: '支付宝',payId: '03',payIcon:'icon_alipay'},
+                    {payName: '网银在线',payId: '04',payIcon:'icon_chinabank'},
+                    {payName: '中国银联',payId: '05',payIcon:'icon_ChinaPay'},
+                    {payName: '微信支付',payId: '06',payIcon:'icon_wxpay'},
+                    {payName: '银行汇款/转帐',payId: '07',payIcon:'icon_bank'}
                 ],
-                show:false
+                 address: [
+                    {addressName: 'pizza',addressTel:'15253135699',addressInfo:'山东济南历下区玉兰广场3号楼606' },
+                    {addressName: 'spaghetti',addressTel:'15253135699',addressInfo:'山东泰安泰山区泰山路11号' },
+                    {addressName: 'pasta',addressTel:'15253135699',addressInfo:'山东淄博张店区海盛水产市场：金晶大道与联通路交叉南100米（金晶大道239）' },
+                    {addressName: 'carpaccio',addressTel:'15253135699',addressInfo:'黑龙江哈尔滨通河县一个冬天冻得人想哭的城市15253135699' },
+                    {addressName: 'lasagne',addressTel:'15253135699',addressInfo:'山东省 济南市 历下区 文东街道 文化东路38-1号4号楼' },
+                    {addressName: 'risotto',addressTel:'18660809824',addressInfo:'山东省 济南市 历下区 解放路1-7号喜士多便利店' },
+                    {addressName: 'tagliatelle',addressTel:'15562697669',addressInfo:'山东省 济南市 历下区 甸新北路11号凝萌织坊' },
+                    {addressName: 'sformato',addressTel:'13011740566',addressInfo:'大鹏房产联通营业厅' }
+                ],
+                selected: 0,
+                show:false,
+                receiveName:'mefisto',
+                receiveTel:'13526548654',
+                receiveInfo:'山东淄博张店区海盛水产市场',
+                addressPart:true,
+                addressShow:false,
 
             }
         },
         methods: {
+            choose:function (index) {
+                this.selected = index
+                this.receiveName = this.address[index].addressName
+                this.receiveTel = this.address[index].addressTel
+                this.receiveInfo = this.address[index].addressInfo
+                this.show = false
+            },
             showPopup(){
                 this.show = true
+                if(this.addressPart==true){
+                  this.addressShow=true
+                }
             },
             ok(popup) {
                 this.show = false
-                this.items.push(popup);
+
+
             },
             cancel(popup) {
                 this.show = false
@@ -186,6 +237,7 @@
 
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   @import url('../../assets/css/bootstrap.min.css');
+  /*主页面*/
   ol, ul
     list-style none
   .clear
@@ -223,11 +275,13 @@
           text-overflow ellipsis
           white-space nowrap
           overflow hidden
-          s
+          s,i
             text-decoration none
+            font-style normal
         span
           width 90%
-         
+          height 1.2em
+          display block
           font-size 1.1em
           color rgb(153, 153, 153)
           overflow hidden
@@ -482,52 +536,21 @@
       display block
       border-bottom 1px solid #ddd
     .order_timer
-      padding-left 2.2em
-      position relative
       margin-left 10px
-    .order_timer:before
-      content '\EA01'
-      color #C9C9C9
-      font-size 23px
-      display block
-      position absolute
-      z-index 1
-      left0
-      top10px
-      font-family weui
-      font-style normal
-      font-weight 400
-      speak none
-      vertical-align middle
-      text-decoration inherit
-      width 1em
-      text-align center
-      font-variant normal
-      text-transform none
-      line-height 1em
-      margin-left .2em
-  .order_timer.order_timer_curr:before
-    content '\EA06'
-    color #09BB07
+      margin-right 20px
   .all_info
       span
         height 100%
-        line-height 44px
         font-family 'Microsoft Yahei'
         font-size 1.32em
         color #999999
         float left
+        margin-right 10px
       .gary_text
         width 100%
         display block
-    order_timer:before
-      content '\EA01'
-      color #C9C9C9
-      font-size 23px
-      display block
-  .order_timer.order_timer_curr:before
-      content '\EA06'
-      color #09BB07
+      .weui_check
+        margin-top 1em
     a
       p
         max-width 50%
@@ -561,10 +584,12 @@
       -webkit-appearance none
   .submit_info
     width 100%
-    height 6em
+    height auto
+    overflow hidden
     display block
     margin 0 auto
-    padding-top 2.2em
+    margin-bottom 1em
+    padding-top 1em
     overflow hidden
     .submit_btn
       width 90%
@@ -596,4 +621,53 @@
   background url(/static/images/checkbox.png) no-repeat 0px 2px
   outline none
   border none
+</style>
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+  /*子页面内容*/
+  /*地址选择器 start*/
+  .address_ul
+    width 100%
+    overflow hidden
+    display block
+    overflow scroll
+    padding 0
+    padding-top 30px
+    padding-bottom 30px
+    margin 0
+    list-style none
+    .active
+      background-color #676F85!important
+      color #fff
+      .lt
+        span
+          color #fff
+    li
+      width 100%
+      overflow hidden
+      display block
+      color #999999
+      padding-top 1em
+      padding-bottom 1em
+      border-top 1px solid #eeeeee
+    .lt
+      width 81%
+      float left
+      p
+        width 100%
+        padding-top 0.5em
+        font-family Microsoft Yahei
+        font-size 1.2em
+        display block
+        float left
+      span
+        float left
+        i
+        font-style normal
+        color #333
+        font-weight bold
+      s
+        float right
+        text-decoration none
+  /*地址选择器 end*/
+
 </style>

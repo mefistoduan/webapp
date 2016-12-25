@@ -179,10 +179,12 @@
         position: relative;
         bottom:0;
         width:100%;
-        height:300px;
+        height:340px;
+        max-height:50%;
         background-color: #fff;
         outline: 0;
         border:none;
+        overflow:scroll;
     }
     .modal-leave {
         border-radius: 1px !important;
@@ -198,12 +200,18 @@
         opacity: 0;
     }
     .popup-header {
-        padding: 15px 35px;
+        position:fixed;
+        width:100%;
+        height:44px;
+        display:block;
+        padding: 10px 35px;
         min-height: 16.43px;
-        border-bottom: 1px solid #e5e5e5;
+        background-color:#fff;
+        z-index:15;
     }
     .modal-body {
-        padding: 15px 50px;
+        overflow:scroll;
+        padding: 15px 10px;
     }
     .modal-title {
         text-align: left;
