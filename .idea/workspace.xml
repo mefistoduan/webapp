@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="" />
+    <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/checkout/checkout.vue" afterPath="$PROJECT_DIR$/src/module/checkout/checkout.vue" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -24,11 +27,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settle.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="settle.js" pinned="false" current-in-tab="false">
         <entry file="file://F:/wamp/www/emeixian/mobile/js/settle.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="59">
-              <caret line="485" column="25" lean-forward="false" selection-start-line="485" selection-start-column="12" selection-end-line="485" selection-end-column="25" />
+            <state relative-caret-position="178">
+              <caret line="402" column="43" lean-forward="false" selection-start-line="402" selection-start-column="43" selection-end-line="402" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="65" column="204" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="65" selection-end-column="204" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topic_1122pot.dwt" pinned="false" current-in-tab="false">
+        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-52">
+              <caret line="561" column="36" lean-forward="false" selection-start-line="561" selection-start-column="36" selection-end-line="561" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topic_fruit_cut.dwt" pinned="false" current-in-tab="false">
+        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_fruit_cut.dwt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="390" column="27" lean-forward="true" selection-start-line="390" selection-start-column="27" selection-end-line="390" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="topic_11ready.dwt" pinned="false" current-in-tab="false">
+        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_11ready.dwt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="561">
+              <caret line="1088" column="33" lean-forward="true" selection-start-line="1088" selection-start-column="28" selection-end-line="1088" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -48,14 +101,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>, &quot;å¾®è½¯é›…é»‘&quot;;</find>
-      <find>border</find>
-      <find>before</find>
-      <find>order_info</find>
-      <find>title</find>
-      <find>tax_info_btn</find>
-      <find>tax_info</find>
-      <find>all_info</find>
       <find>pay_info</find>
       <find>icon_balance</find>
       <find>show</find>
@@ -77,7 +122,15 @@
       <find>banner17</find>
       <find>add_package</find>
       <find>calcPrice</find>
+      <find>goodListShow</find>
+      <find>promote</find>
       <find>deliver_arrive_container</find>
+      <find>lt</find>
+      <find>白心</find>
+      <find>105</find>
+      <find>part</find>
+      <find>gift_ul</find>
+      <find>li_warp</find>
     </findStrings>
     <replaceStrings>
       <replace>shoppting-checkbox</replace>
@@ -118,16 +171,16 @@
         <option value="F:/wamp/www/emeixian/shop_index.php" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/css/shop_index.css" />
         <option value="$PROJECT_DIR$/src/components/popup/popup.vue" />
-        <option value="$PROJECT_DIR$/src/module/cart/cart.vue" />
         <option value="$PROJECT_DIR$/build/dev-server.js" />
-        <option value="$PROJECT_DIR$/src/module/checkout/checkout.vue" />
         <option value="F:/wamp/www/emeixian/mobile/css/meixian_index.css" />
         <option value="F:/wamp/www/emeixian/mobile/templates/index.dwt" />
         <option value="F:/wamp/www/emeixian/mobile/js/common.js" />
-        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_burst_buy.dwt" />
         <option value="F:/wamp/www/emeixian/mobile/js/cart_checkout_package.js" />
         <option value="F:/wamp/www/emeixian/mobile/js/settle.js" />
+        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt" />
+        <option value="$PROJECT_DIR$/src/module/cart/cart.vue" />
+        <option value="$PROJECT_DIR$/src/module/checkout/checkout.vue" />
       </list>
     </option>
   </component>
@@ -279,7 +332,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59572000" />
+    <option name="totallyTimeSpent" value="68258000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -329,15 +382,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/tab-item/tab-item.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://D:/Documents/Tencent Files/838560574/FileRecv/controller.js" />
-    <entry file="file://F:/veshop/shop/package.json" />
     <entry file="file://$PROJECT_DIR$/build/dev-client.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -469,6 +513,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -546,13 +591,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="378" column="19" lean-forward="true" selection-start-line="363" selection-start-column="3" selection-end-line="378" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -567,6 +606,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -598,25 +638,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="570" column="16" lean-forward="false" selection-start-line="570" selection-start-column="16" selection-end-line="570" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/wamp/www/emeixian/topic.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
           <caret line="1626" column="2" lean-forward="false" selection-start-line="1626" selection-start-column="2" selection-end-line="1626" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="846" column="28" lean-forward="false" selection-start-line="846" selection-start-column="27" selection-end-line="846" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -670,6 +695,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://F:/wamp/www/emeixian/mobile/js/settle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="402" column="43" lean-forward="false" selection-start-line="402" selection-start-column="43" selection-end-line="402" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_ruima.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="346" column="0" lean-forward="true" selection-start-line="346" selection-start-column="0" selection-end-line="346" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_11ready.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="1088" column="33" lean-forward="true" selection-start-line="1088" selection-start-column="28" selection-end-line="1088" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://F:/wamp/www/emeixian/mobile/js/cart_checkout_package.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -678,10 +727,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/wamp/www/emeixian/mobile/js/settle.js">
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_fruit_cut.dwt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="59">
-          <caret line="485" column="25" lean-forward="false" selection-start-line="485" selection-start-column="12" selection-end-line="485" selection-end-column="25" />
+        <state relative-caret-position="332">
+          <caret line="390" column="27" lean-forward="true" selection-start-line="390" selection-start-column="27" selection-end-line="390" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-52">
+          <caret line="561" column="36" lean-forward="false" selection-start-line="561" selection-start-column="36" selection-end-line="561" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="65" column="204" lean-forward="false" selection-start-line="58" selection-start-column="20" selection-end-line="65" selection-end-column="204" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="39" column="49" lean-forward="true" selection-start-line="39" selection-start-column="49" selection-end-line="39" selection-end-column="49" />
           <folding />
         </state>
       </provider>

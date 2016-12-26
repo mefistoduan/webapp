@@ -22,10 +22,45 @@
           </li>
         </ul>
       </div>
+      <div class="part" v-show='goodListShow'>
+        <ul class="gift_ul">
+          <li class="li_warp" v-for="(good,index) in goods" v-bind:value="goodsId">
+            <img v-bind:src="good.goodsImg" alt="">
+            <p class="goods_name">
+              <i class="icon_sample"></i>
+              {{good.goodsName}}                           </p>
+            <span class="unite">{{good.goodsUnit}}   </span>
+            <s class="price">￥{{good.goodsPrice}}</s>
+            <div class="calc_num">
+              <span class="text">×{{good.goodsNum}}</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="part" v-show="goodExpressShow">
+        <ul class="express_ul">
+          <li alt="7" value="7" class="usable">冷藏保温物流<s></s></li>
+          <li alt="13" value="13" class="usable">美鲜冷链物流<s></s></li>
+          <li alt="16" value="16" class="usable">湘达物流<s></s></li>
+          <li alt="20" value="20" class="usable">和泰汇达<s></s></li>
+          <li alt="22" value="22" class="usable">永辉物流<s></s></li>
+        </ul>
+        <select name="express_select" class="express_select " disabled="disabled">
+          <option value="0">选择提货网点</option>
+        </select>
+        <div class="deliver_arrive_container" alt="0" style="display: none;">
+          <div class="weui_cell_hd">
+            <input type="checkbox" name="consignee_pay[0]" class="weui_check" value="0">
+            <i class="weui_icon_checked"></i>
+          </div>
+          <em>运费到付</em>
+        </div>
+        }
+      </div>
     </popup>
     <!--popup-->
 
-    <div class="buyer_info" @click="showPopup(addressPart)">
+    <div class="buyer_info" @click="showPopup(1)">
       <i class=" icon_local"></i>
       <div>
         <h5> <i>{{receiveName}}</i> <s>{{receiveTel}}</s></h5>
@@ -35,13 +70,13 @@
 
     <div class="meixian_self_info warehouse">
       <p class="title">美鲜自营：济南仓</p>
-      <div class="meixianSelfList goods_detail_list">
+      <div class="meixianSelfList goods_detail_list" @click="showPopup(2)">
         <ul>
           <li><img src="../../../static/images/3000_P_1473116647145.jpg" alt=""></li>
         </ul>
         <div class="get_more">
           <div>
-            <span>共2件</span>
+            <span>共43件</span>
             <i class="icon_more"></i>
           </div>
           <i class=" icon_left"></i>
@@ -49,7 +84,7 @@
       </div>
       <div class="clear"></div>
 
-      <div class="express weui_cell">
+      <div class="express weui_cell"  @click="showPopup(3)">
         <div class="icon_warp">
           <img class="icon_package" src="/static/images/car.png">
         </div>
@@ -194,13 +229,24 @@
                     {addressName: 'tagliatelle',addressTel:'15562697669',addressInfo:'山东省 济南市 历下区 甸新北路11号凝萌织坊' },
                     {addressName: 'sformato',addressTel:'13011740566',addressInfo:'大鹏房产联通营业厅' }
                 ],
+                goods: [
+                    {goodsId: '795337',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795339',goodsName: '丽莎莉达牌意大利粉 丽歌制造 2.5kg/包 5包/箱',goodsUnit:'整箱',goodsPrice:'101.00',goodsNum:'2',goodsImg:'../../../static/images/2143_P_1449091000718.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '东古 蚝油 6kg/桶 2桶/箱',goodsUnit:'单桶',goodsPrice:'57.80',goodsNum:'1',goodsImg:'../../../static/images/2401_P_1460653361322.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '广味源 广味海鲜酱 255g/瓶 12瓶/箱',goodsUnit:'整箱',goodsPrice:'78.00',goodsNum:'1',goodsImg:'../../../static/images/2613_P_1464119690629.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '元盛 经典牛肉饼 1.8kg/袋（40片）4袋/箱',goodsUnit:'整箱',goodsPrice:'155.50',goodsNum:'1',goodsImg:'../../../static/images/2724_P_1470597064231.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '鼎丰 料酒王 500ml/瓶 12瓶/箱 ',goodsUnit:'单瓶',goodsPrice:'4.40',goodsNum:'11',goodsImg:'../../../static/images/3000_P_1473116647145.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                ],
                 selected: 0,
                 show:false,
                 receiveName:'mefisto',
                 receiveTel:'13526548654',
                 receiveInfo:'山东淄博张店区海盛水产市场',
-                addressPart:true,
                 addressShow:false,
+                goodListShow:false,
+                goodExpressShow:false
 
             }
         },
@@ -212,10 +258,20 @@
                 this.receiveInfo = this.address[index].addressInfo
                 this.show = false
             },
-            showPopup(){
+            showPopup(str){
                 this.show = true
-                if(this.addressPart==true){
-                  this.addressShow=true
+                if(str == 1){
+                  this.addressShow = true
+                  this.goodListShow = false
+                }
+                if(str == 2){
+                    this.addressShow = false
+                    this.goodListShow = true
+                }
+                if(str == 3){
+                    this.addressShow = false
+                    this.goodListShow = false
+                    this.goodExpressShow = true
                 }
             },
             ok(popup) {
@@ -625,6 +681,10 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
   /*子页面内容*/
   /*地址选择器 start*/
+  .part
+    width 100%
+    overflow hidden
+    display block
   .address_ul
     width 100%
     overflow hidden
@@ -652,6 +712,7 @@
     .lt
       width 81%
       float left
+      padding-left 20px
       p
         width 100%
         padding-top 0.5em
@@ -669,5 +730,93 @@
         float right
         text-decoration none
   /*地址选择器 end*/
+  .gift_ul 
+    width 100%
+    height 15em
+    display block
+    overflow scroll
+    padding 0
+    padding-top 20px
 
+  .li_warp
+    width 96%
+    height 10em
+    float left
+    display block
+    padding-bottom 1em
+    border-bottom 1px solid #eeeeee
+    img
+      width 7.59em
+      height 7.59em
+      float left
+      margin-top 1em
+      margin-right 0.5em
+      border 1px solid #eeeeee
+   .goods_name
+      padding-top 1em
+      padding-right 0.5em
+      padding-left 0.5em
+      font-family "Microsoft Yahei"
+      font-size 0.875em
+      color rgb(101, 101, 101)
+      overflow hidden
+    .unite
+      width 60%
+      height 1.2em
+      font-family "Microsoft Yahei"
+      font-size 1em
+      color rgb(153, 153, 153)
+      line-height 1.8em
+      padding-left 0.5em
+      display block
+    
+   .price
+      max-width 49%
+      height 2em
+      display block
+      font-family "Microsoft Yahei"
+      font-size 1.5em
+      color rgb(51, 51, 51)
+      float left
+      line-height 2em
+      font-weight bold
+      text-decoration none
+  .li_warp:nth-child(1)
+    border-top 1px solid #eeeeee
+    margin-top 10px
+  .calc_num
+    max-width 10.625em
+    height 1.875em
+    display block
+    float right
+    margin-top 0
+    margin-right 0.5em
+  /*配送方式*/
+  .express_ul {
+    width: 50%;
+    height: 14em;
+    overflow: scroll;
+    overflow-x: hidden;
+    float: left;
+    margin-bottom: 2em;
+  }
+    li {
+      width: 90%;
+      height: 3em;
+      margin-top: 1em;
+      float: none!important;
+      margin-left: 1%;
+      margin-right: 1%;
+      border: 1px solid #999999;
+      border-radius: 4px;
+      font-family: "Microsoft Yahei", "微软雅黑";
+      font-size: 1.25em;
+      color: #999999;
+      line-height: 3em;
+      text-align: center;
+    }
+   li.curr_li {
+    border: 1px solid #15AD35;
+    color: #15AD35;
+  }
 </style>
