@@ -49,3 +49,4 @@ node_modules/.bin/node-gyp
 node_modules/.bin/babylon
 node_modules/.bin/ansi-html
 npm-debug.log.1130518507
+.idea/workspace.xml
