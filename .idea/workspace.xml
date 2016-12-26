@@ -23,13 +23,31 @@
     <fileColor scope="Changed Files" color="ebebeb" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="settle.js" pinned="false" current-in-tab="true">
+        <entry file="file://F:/wamp/www/emeixian/mobile/js/settle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="485" column="25" lean-forward="false" selection-start-line="485" selection-start-column="12" selection-end-line="485" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cart_checkout_package.js" pinned="false" current-in-tab="false">
+        <entry file="file://F:/wamp/www/emeixian/mobile/js/cart_checkout_package.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="399">
+              <caret line="239" column="28" lean-forward="true" selection-start-line="239" selection-start-column="28" selection-end-line="239" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>.icon_warp</find>
-      <find>.icon_left</find>
-      <find>meixian_self_info</find>
       <find>, &quot;å¾®è½¯é›…é»‘&quot;;</find>
       <find>border</find>
       <find>before</find>
@@ -57,6 +75,9 @@
       <find>is_best_presale</find>
       <find>面包</find>
       <find>banner17</find>
+      <find>add_package</find>
+      <find>calcPrice</find>
+      <find>deliver_arrive_container</find>
     </findStrings>
     <replaceStrings>
       <replace>shoppting-checkbox</replace>
@@ -105,6 +126,8 @@
         <option value="F:/wamp/www/emeixian/mobile/js/common.js" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_burst_buy.dwt" />
+        <option value="F:/wamp/www/emeixian/mobile/js/cart_checkout_package.js" />
+        <option value="F:/wamp/www/emeixian/mobile/js/settle.js" />
       </list>
     </option>
   </component>
@@ -256,7 +279,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58109000" />
+    <option name="totallyTimeSpent" value="59572000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -268,8 +291,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1034" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18004338" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -306,20 +329,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/swipe/swipe.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/tabbar/tabbar.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/tab-item/tab-item.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -658,6 +667,22 @@
             <element signature="n#div#6;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#div#8;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/mobile/js/cart_checkout_package.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="239" column="28" lean-forward="true" selection-start-line="239" selection-start-column="28" selection-end-line="239" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/mobile/js/settle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="59">
+          <caret line="485" column="25" lean-forward="false" selection-start-line="485" selection-start-column="12" selection-end-line="485" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
