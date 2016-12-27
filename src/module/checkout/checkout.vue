@@ -1,3 +1,4 @@
+<script src="../../router/index.js"></script>
 <link rel="stylesheet" href="../../../../../wamp/www/emeixian/mobile/css/meixian_index.css">
 <script src="../../../../auto/build/dev-server.js"></script>
 <link rel="stylesheet" href="../../../../../wamp/www/emeixian/themes/68ecshopcom_360buy/css/shop_index.css">
@@ -39,15 +40,12 @@
       </div>
       <div class="part" v-show="goodExpressShow">
         <ul class="express_ul">
-          <li alt="7" value="7" class="usable">冷藏保温物流<s></s></li>
-          <li alt="13" value="13" class="usable">美鲜冷链物流<s></s></li>
-          <li alt="16" value="16" class="usable">湘达物流<s></s></li>
-          <li alt="20" value="20" class="usable">和泰汇达<s></s></li>
-          <li alt="22" value="22" class="usable">永辉物流<s></s></li>
+          <li  v-bind:value="express.expressType" class="usable" v-for="(express,index) in expressList" v-bind:class="{curr_li:index === selected}" @click="chooseExpress(index)">{{express.expressName}}<s></s></li>
         </ul>
-        <select name="express_select" class="express_select " disabled="disabled">
-          <option value="0">选择提货网点</option>
+        <select name="express_select" class="express_select" v-bind:class="{green:showGreen}" @click="color">
+          <option v-bind:value="station.value" v-for="(station,index) in stations">{{station.stationName}}</option>
         </select>
+
         <div class="deliver_arrive_container" alt="0" style="display: none;">
           <div class="weui_cell_hd">
             <input type="checkbox" name="consignee_pay[0]" class="weui_check" value="0">
@@ -56,6 +54,39 @@
           <em>运费到付</em>
         </div>
         }
+      </div>
+      <div class="part" v-show="packageShow">
+        <div class="packagePart">
+          <div class="show_default_package selected " specil_customr="1">
+            <a href="javascript:void(0)" >
+              使用推荐包装
+            </a>
+          </div>
+          <!--todo-->
+          <div class="show_add_package " style="display:none">
+            <a href="javascript:void(0)" >
+              编辑可选包装
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="part" v-show="accountShow">
+        <div class="weui_actionsheet_menu">
+          <ul class="account_ul">
+            <li alt="1" class="curr_li">当前余额￥<em class="user_surplus">{{account}}</em></li>
+            <input class="account_input" placeholder="输入使用的余额" type="number" v-model="accountUse" @blur="checkNum" >
+          </ul>
+        </div>
+      </div>
+
+      <div class="part" v-show="payBiLLShow">
+        <div class="weui_actionsheet_menu">
+          <ul class="account_ul">
+            <input class="account_input" type="text" v-model="payBill" @click="calcPayBill" >
+            <li alt="1" class="curr_li">发票类型：<em class="user_surplus">增值税专用发票[3%]</em></li>
+          </ul>
+        </div>
       </div>
     </popup>
     <!--popup-->
@@ -90,25 +121,25 @@
         </div>
         <span>配送方式</span>
         <i class="icon icon_left"></i>
-        <p>未选择</p>
+        <p>{{expressSelect}}</p>
       </div>
 
-      <div class="package weui_cell">
+      <div class="package weui_cell" @click="showPopup(4)">
         <div class="icon_warp">
           <img class="icon_package" src="/static/images/box.png">
         </div>
         <span>包装方式</span>
         <i class="icon icon_left"></i>
-        <p>￥0</p>
+        <p>￥{{packageFee}}</p>
       </div>
-    </div>
+      </div>
 
     <!--余额 start-->
-    <div class="order_info">
+    <div class="order_info"  @click="showPopup(5)">
       <div class="account weui_cell">
         <span>余额</span>
         <i class="icon icon_left"></i>
-        <p>使用余额：￥0.00</p>
+        <p>使用余额：￥{{accountUse}}</p>
       </div>
     </div>
     <!--余额 end-->
@@ -128,11 +159,11 @@
     <!--支付方式 end-->
 
     <!--发票信息 start-->
-    <div class="tax_info">
+    <div class="tax_info" @click="showPopup(6)">
       <a class="tax_info_btn weui_cell">
         <span>发票信息</span>
         <i class="icon icon_left"></i>
-        <p>开发票</p>
+        <p>{{payBill}}</p>
       </a>
     </div>
     <!--发票信息 end-->
@@ -141,27 +172,23 @@
     <div class="all_info">
       <a class="weui_cell">
         <span>应付总额</span>
-        <p>￥<em class="order_amount each_fee">64.01</em></p>
+        <p>￥<em class="order_amount each_fee">{{sumFee}}</em></p>
       </a>
-      <input type="hidden" name="order_amount" value="64.01">
       <a class="weui_cell gary_text">
         <span>商品</span>
-        <p>￥<em class="goods_amount each_fee">64.01</em></p>
+        <p>￥<em class="goods_amount each_fee">{{goodsFee}}</em></p>
       </a>
       <a class="weui_cell gary_text">
         <span>运费</span>
-        <p>￥<em class="shipping_fee each_fee">0.00</em></p>
+        <p>￥<em class="shipping_fee each_fee">{{expressFee}}</em></p>
       </a>
       <a class="weui_cell gary_text">
         <span>包装费用</span>
-        <p>￥<em class="package_sum_fee each_fee">0.00</em></p>
+        <p>￥<em class="package_sum_fee each_fee">{{packageFee}}</em></p>
       </a>
-      <a class="weui_cell gary_text other_btn" style="display:none">
+      <a class="weui_cell gary_text other_btn">
         <span>其他</span>
-        <div class="icon_warp">
-          <img class="icon_info" src="">
-        </div>
-        <p>￥<em class="other_fee each_fee">0.00</em></p>
+        <p>￥<em class="other_fee each_fee">{{payBillFee}}</em></p>
       </a>
       <a class="weui_cell gary_text fee_option" style="display:none">
         <span>补上次抄码差价</span>
@@ -197,16 +224,33 @@
 
     <!--提交订单-->
     <div class="submit_info">
-      <button class="submit_btn weui_btn_primary" type="submit">提交订单</button>
+      <router-link to="/finish" class="jump_part">
+        <button class="submit_btn weui_btn_primary" type="submit">提交订单</button>
+      </router-link>
     </div>
 </div>
 </template>
 
 <script>
     import popup from '../../components/popup/popup.vue'
+    import Vue from 'vue'
+    import BootstrapVue from 'bootstrap-vue'
+    Vue.use(BootstrapVue)
     export default {
         data () {
             return {
+                props: {
+                    id: {
+                        type: String
+                    },
+                    model: {
+                        required: false
+                    }
+                },
+                model:{
+                    list:'',
+                    size:'md'
+                },
                 popup: {
                     popupName:'提醒'
                 },
@@ -239,18 +283,70 @@
                     {goodsId: '795337',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
                     {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
                 ],
-                selected: 0,
+                expressList: [
+                    {expressName: '冷藏保温物流',expressType: '01'},
+                    {expressName: '美鲜冷链物流',expressType: '02'},
+                    {expressName: '湘达物流',expressType: '03'},
+                    {expressName: '和泰汇达',expressType: '04'},
+                    {expressName: '永辉物流',expressType: '05'}
+                ],
+                stations: [
+                    {stationName: '选择提货网点',value: '0'},
+                    {stationName: '周村',value: '1'},
+                    {stationName: '淄博',value: '2'},
+                    {stationName: '临淄',value: '3'},
+                    {stationName: '淄川',value: '4'},
+                    {stationName: '博山',value: '5'}
+                ],
+                selected: -1,
                 show:false,
                 receiveName:'mefisto',
                 receiveTel:'13526548654',
                 receiveInfo:'山东淄博张店区海盛水产市场',
                 addressShow:false,
                 goodListShow:false,
-                goodExpressShow:false
+                goodExpressShow:false,
+                packageShow:false,
+                expressSelect:'未选择',
+                showGreen:false,
+                accountShow:false,
+                payBiLLShow:false,
+                packageFee:30.30,
+                expressFee:120.20,
+                account:3000.30,
+                goodsFee:375.00,
+                sumFee:525.50,
+                accountUse:0.00,
+                payBill:'发票抬头',
+                payBillFee:0.00
 
             }
         },
         methods: {
+            autoCalc:function () {
+                let payFeeFloat = parseFloat(this.packageFee)
+                let sum = (this.goodsFee + this.expressFee + payFeeFloat).toFixed(2)
+                this.sumFee = sum
+            },
+            calcPayBill:function () {
+                let payFee = (this.goodsFee*0.003).toFixed(2)
+                this.payBillFee = payFee
+            },
+            checkNum:function () {
+                let Num = this.accountUse
+                let max = this.account
+                if (Num>max){
+                    this.accountUse = max
+                }
+                else{
+                    if(Num<0){
+                        this.accountUse = 0
+                    }
+                }
+            },
+            color:function () {
+              this.showGreen = true
+            },
             choose:function (index) {
                 this.selected = index
                 this.receiveName = this.address[index].addressName
@@ -258,33 +354,49 @@
                 this.receiveInfo = this.address[index].addressInfo
                 this.show = false
             },
+            chooseExpress:function (index) {
+                this.selected = index
+                let name =''
+                index==0?name = '冷藏保温物流':index==1?name = '美鲜冷链物流':index==2?name = '湘达物流':index==3?name = '和泰汇达':index==4?name = '永辉物流':name = ''
+                this.expressSelect = name
+            },
             showPopup(str){
                 this.show = true
+                this.addressShow = false
+                this.goodListShow = false
+                this.goodExpressShow = false
+                this.packageShow = false
+                this.accountShow = false
+                this.payBiLLShow = false
                 if(str == 1){
                   this.addressShow = true
-                  this.goodListShow = false
                 }
                 if(str == 2){
-                    this.addressShow = false
                     this.goodListShow = true
                 }
                 if(str == 3){
-                    this.addressShow = false
-                    this.goodListShow = false
                     this.goodExpressShow = true
+                }
+                if(str == 4){
+                    this.packageShow = true
+                }
+                if(str == 5){
+                    this.accountShow = true
+                }
+                if(str == 6){
+                    this.payBiLLShow = true
                 }
             },
             ok(popup) {
                 this.show = false
-
-
+                this.autoCalc()
             },
             cancel(popup) {
                 this.show = false
             }
         },
         components: {
-            popup
+            popup, BootstrapVue
         }
     }
 </script>
@@ -628,6 +740,7 @@
     margin-top 1em
     .weui_cell
       height auto
+      border-top none
   .weui_cell_primary
     display block
    .weui_textarea
@@ -792,31 +905,125 @@
     margin-top 0
     margin-right 0.5em
   /*配送方式*/
-  .express_ul {
-    width: 50%;
-    height: 14em;
-    overflow: scroll;
-    overflow-x: hidden;
-    float: left;
-    margin-bottom: 2em;
-  }
-    li {
-      width: 90%;
-      height: 3em;
-      margin-top: 1em;
-      float: none!important;
-      margin-left: 1%;
-      margin-right: 1%;
-      border: 1px solid #999999;
-      border-radius: 4px;
-      font-family: "Microsoft Yahei", "微软雅黑";
-      font-size: 1.25em;
-      color: #999999;
-      line-height: 3em;
-      text-align: center;
-    }
-   li.curr_li {
-    border: 1px solid #15AD35;
-    color: #15AD35;
-  }
+  .express_ul
+    width 50%
+    height 14em
+    overflow scroll
+    overflow-x hidden
+    float left
+    margin-bottom 2em
+    padding-top 2em
+    li
+      width 90%
+      padding 3px 3px
+      margin-top 1em
+      float none!important
+      margin-left 1%
+      margin-right 1%
+      border 1px solid #999999
+      border-radius 4px
+      font-family "Microsoft Yahei", "微软雅黑"
+      font-size 0.875em
+      color #999999
+      line-height 3em
+      text-align center
+   li.curr_li
+    border 1px solid #15AD35
+    color #15AD35
+.express_select
+  width 40%
+  height 3em
+  float right
+  margin-top 3.8em
+  margin-right 10px
+  color rgb(153, 153, 153)
+  background-color rgb(255, 255, 255)
+  -webkit-appearance none
+  text-indent 1em
+  font-family "Microsoft Yahei"
+  font-size 0.875em
+  border-width 1px
+  border-style solid
+  border-color rgb(238, 238, 238)
+  border-image initial
+.green
+  color #1eaa39!important
+  border 1px solid #1eaa39
+  outline none
+.packagePart
+  margin-top 4em
+  overflow hidden
+.show_add_package
+    width 40%
+    float left
+    color #999999
+    margin-left 10px
+    margin-bottom 10px
+    text-align center
+    border 1px solid #999999
+    -moz-border-radius 4px
+    -webkit-border-radius 4px
+    padding 1px
+    padding-top 5px
+    padding-bottom 5px
+.show_default_package
+    width 40%
+    float left
+    color #999999
+    margin-left 10px
+    margin-bottom 10px
+    text-align center
+    border 1px solid #999999
+    -moz-border-radius 4px
+    -webkit-border-radius 4px
+    padding 1px
+    padding-top 5px
+    padding-bottom 5px
+
+  .selected
+    border 2px solid #1a9733
+    padding 0px
+    padding-top 4px
+    padding-bottom 4px
+    a
+      color #1a9733
+a
+  width 100%
+  display block
+  text-decoration none
+.weui_actionsheet_menu
+  background-color #FBFBFB
+  margin-top 3em
+  .account_ul
+    width 100%
+    display block
+    overflow hidden
+    list-style none
+    padding 0
+    li
+      width 90%
+      height 3em
+      display block
+      margin 0 auto
+      border 1px solid #F2F2F2
+      border-radius 4px
+      margin-top 1em
+      text-indent 2em
+      line-height 3em
+      color #999999
+    .curr_li
+      color #15AD35 !important
+      border 1px solid #15AD35 !important
+  .account_input
+    width 90%
+    height 3em
+    font-size 1.1em
+    display block
+    margin 0 auto
+    margin-top 1em
+    border 1px solid #F2F2F2
+    text-indent 2em
+    line-height 2em
+    -webkit-appearance none
+
 </style>

@@ -18,6 +18,7 @@ import help from '../module/topic/help.vue'
 import detail from '../module/detail/detail.vue'
 import cart from '../module/cart/cart.vue'
 import test from '../module/test/test.vue'
+import finish from '../module/finish/finish.vue'
 import checkout from '../module/checkout/checkout.vue'
 
 export default new Router({
@@ -47,6 +48,7 @@ export default new Router({
     { path: '/cart', component: cart },
     { path: '/checkout', component: checkout },
     { path: '/test', component: test },
+    { path: '/finish', component: finish },
     { path: '/AddressList', redirect: '/AddressList' },
     { path: '/topic-verify', component: topicVerify }
   ]
