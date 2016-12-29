@@ -4,10 +4,10 @@
       <div class="inner">
         <button class="logo btn btn-success btn-md" alt="logo" @click="showBar"><i class="glyphicon glyphicon-align-justify"></i></button>
         <form action="" class="bs-example bs-example-form">
-        <div class="input-group col-xs-7 search_part">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-          <input type="text" class="form-control" placeholder="试试薯条+奶酪">
-          <submit class="input-group-addon" name='serach_btn'>搜索</submit>
+        <div class=" col-xs-8 search_part">
+          <span class="icon_question"><i class="glyphicon glyphicon-search"></i></span>
+          <input type="text" class="search_content" placeholder="试试薯条+奶酪">
+          <button class="search_content_button">搜索</button>
         </div>
         </form>
         <router-link to="/About"><button class="btn btn-success btn-md"><i class="glyphicon glyphicon-user"></i></button></router-link>
@@ -22,16 +22,20 @@
     <!--侧边栏遮罩层-->
     <div v-if="showSidebar" class="sidebar-mask" @click="hiddenBar"></div>
   </div>
+
 </template>
 <script>
 import EgdSideBar from 'sidebar'
     export default {
+      submit() {
+            console.log('Vue ready...')
+      },
       components: {
       EgdSideBar
         }
       }
 </script>
-<style lang="stylus">
+<style lang="stylus" rel="stylesheet/stylus">
   body
     font-family Roboto, Helvetica, sans-serif
     font-size 15px
@@ -57,8 +61,10 @@ import EgdSideBar from 'sidebar'
       box-sizing border-box
       margin 3px auto
       z-index 2
-   .search_part
-      float left!important
+ .search_part
+    float left!important
+    height 30px
+    overflow hidden
     a
       color rgba(255, 255, 255, .8)
       line-height 24px
@@ -127,4 +133,33 @@ import EgdSideBar from 'sidebar'
     left: 0
     z-index: 5
     background: rgba(0, 0, 0, 0.7)
+.icon_question
+    width 30px
+    height 30px
+    float left
+    padding-left 8px
+    padding-top 5px
+    background-color #ddd
+    float left
+  i
+    display block
+.search_content
+  width 60%
+  height 30px
+  border none
+  line-height 30px
+  text-align center
+  margin 0
+  padding 0
+  float left
+.search_content_button
+  width 39px
+  height 30px
+  margin 0
+  padding 0
+  background-color #5cb85c
+  color #fff
+  outline none
+  border 2px solid #fff
+  float left
 </style>
