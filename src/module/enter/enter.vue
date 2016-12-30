@@ -1,3 +1,4 @@
+<script src="../../../../easy-vue/webpack.config.js"></script>
 <template>
     <div class="enter">
         <div class="header">

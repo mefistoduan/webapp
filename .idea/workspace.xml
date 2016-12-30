@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/enter/enter.vue" afterPath="$PROJECT_DIR$/src/module/enter/enter.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -26,105 +26,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
+      <file leaf-file-name="topic_2017happy_new_year.dwt" pinned="false" current-in-tab="false">
+        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_2017happy_new_year.dwt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6851">
-              <caret line="405" column="44" lean-forward="false" selection-start-line="405" selection-start-column="21" selection-end-line="405" selection-end-column="44" />
+            <state relative-caret-position="254">
+              <caret line="306" column="4" lean-forward="false" selection-start-line="306" selection-start-column="4" selection-end-line="308" selection-end-column="5" />
               <folding>
-                <element signature="e#8214#8266#0" expanded="true" />
+                <element signature="n#script#6;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <file leaf-file-name="topic_kangli.dwt" pinned="false" current-in-tab="false">
+        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_kangli.dwt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enter.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/enter/enter.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2057">
-              <caret line="122" column="5" lean-forward="false" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+            <state relative-caret-position="152">
+              <caret line="373" column="35" lean-forward="false" selection-start-line="373" selection-start-column="35" selection-end-line="373" selection-end-column="35" />
               <folding>
-                <element signature="e#3463#3484#0" expanded="true" />
+                <element signature="n#script#10;n#body#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topic_model.htm" pinned="false" current-in-tab="false">
-        <entry file="file://F:/wamp/www/emeixian/admin/templates/topic_model.htm">
+      <file leaf-file-name="topic_woodpecker1.dwt" pinned="false" current-in-tab="true">
+        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_woodpecker1.dwt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1819">
-              <caret line="107" column="33" lean-forward="false" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
+            <state relative-caret-position="492">
+              <caret line="544" column="106" lean-forward="false" selection-start-line="544" selection-start-column="106" selection-end-line="544" selection-end-column="106" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="topic_basic_model.dwt" pinned="false" current-in-tab="false">
-        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_basic_model.dwt">
+      <file leaf-file-name="topic_newYear_popular.dwt" pinned="false" current-in-tab="false">
+        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_newYear_popular.dwt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7191">
-              <caret line="423" column="18" lean-forward="false" selection-start-line="425" selection-start-column="20" selection-end-line="425" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topic_restaurant_level_up.dwt" pinned="false" current-in-tab="false">
-        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_restaurant_level_up.dwt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2193">
-              <caret line="129" column="6" lean-forward="false" selection-start-line="129" selection-start-column="6" selection-end-line="129" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topic_dealer_level_up.dwt" pinned="false" current-in-tab="true">
-        <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_dealer_level_up.dwt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="67" column="18" lean-forward="false" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topic.js" pinned="false" current-in-tab="false">
-        <entry file="file://F:/wamp/www/emeixian/admin/js/topic.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2108">
-              <caret line="124" column="30" lean-forward="false" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="address.vue" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/module/address/address.vue">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="73" lean-forward="false" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="73" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="topic.css" pinned="false" current-in-tab="false">
-        <entry file="file://F:/wamp/www/emeixian/admin/styles/topic.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7429">
-              <caret line="437" column="17" lean-forward="false" selection-start-line="437" selection-start-column="17" selection-end-line="437" selection-end-column="17" />
+            <state relative-caret-position="241">
+              <caret line="738" column="115" lean-forward="false" selection-start-line="738" selection-start-column="107" selection-end-line="738" selection-end-column="115" />
               <folding />
             </state>
           </provider>
@@ -134,36 +74,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>包装方式</find>
-      <find>:</find>
-      <find>show</find>
-      <find>accountUse</find>
-      <find>showPopup</find>
-      <find>payBillFee</find>
-      <find>payBill</find>
-      <find>产品循环列表</find>
-      <find>list_list_style</find>
-      <find>single_style_1</find>
-      <find>.single_setting</find>
-      <find>first_single</find>
-      <find>jump_part</find>
-      <find>foo</find>
-      <find>list_style_1</find>
-      <find>.footer_2016 .help_catalog li</find>
-      <find>.big_li img</find>
-      <find>单品布局</find>
-      <find>big</find>
-      <find>choiceSingleStyle</find>
-      <find>search_part</find>
-      <find>.form-control</find>
-      <find>.col-xs-7</find>
-      <find>carousel</find>
-      <find>images/index/</find>
-      <find>;</find>
-      <find>restaurant_level_up_</find>
       <find>single_banner</find>
       <find>single_container</find>
       <find>.single_banner2</find>
+      <find>w1200</find>
+      <find>liance_content</find>
+      <find>min.js</find>
+      <find>banner12</find>
+      <find>banner13</find>
+      <find>.banner32</find>
+      <find>topic_empty</find>
+      <find>show_part</find>
+      <find>.banner12</find>
+      <find>banner11</find>
+      <find>floa</find>
+      <find>1</find>
+      <find>1122</find>
+      <find>.delear_goods_price .new_price</find>
+      <find>banner11</find>
+      <find>jump_p fix</find>
+      <find>delear_width25</find>
+      <find>new_price</find>
+      <find>banner4</find>
+      <find>.delear_width50</find>
+      <find>buy_btn</find>
+      <find>delear_width100</find>
+      <find>delear_width100</find>
+      <find>floating</find>
+      <find>jsstr</find>
+      <find>jump_p</find>
+      <find>width50</find>
     </findStrings>
     <replaceStrings>
       <replace>shoppting-checkbox</replace>
@@ -176,6 +116,9 @@
       <replace>static/images/</replace>
       <replace>restruant_money_</replace>
       <replace>single_row</replace>
+      <replace>kangli</replace>
+      <replace>2017happy_new_year</replace>
+      <replace>woodpecker1</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -184,8 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/module/test/test2.vue" />
-        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_christmas_delear.dwt" />
         <option value="$PROJECT_DIR$/src/module/empty/about.vue" />
         <option value="$PROJECT_DIR$/src/module/detail/detail.vue" />
         <option value="$PROJECT_DIR$/src/module/topic/help.vue" />
@@ -222,13 +163,21 @@
         <option value="$PROJECT_DIR$/src/module/index/index.html" />
         <option value="$PROJECT_DIR$/src/module/index/App.vue" />
         <option value="$PROJECT_DIR$/src/router/index.js" />
-        <option value="$PROJECT_DIR$/src/module/enter/enter.vue" />
         <option value="F:/wamp/www/emeixian/admin/styles/topic.css" />
         <option value="F:/wamp/www/emeixian/admin/templates/topic_model.htm" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_restaurant_level_up.dwt" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_basic_model.dwt" />
         <option value="F:/wamp/www/emeixian/admin/js/topic.js" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_dealer_level_up.dwt" />
+        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/goods.dwt" />
+        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/style/detail.css" />
+        <option value="$PROJECT_DIR$/src/module/enter/enter.vue" />
+        <option value="$PROJECT_DIR$/../easy-vue/app.vue" />
+        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/js/onecart.js" />
+        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_2017happy_new_year.dwt" />
+        <option value="$USER_HOME$/Desktop/模板组件/topic_empty.dwt" />
+        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_kangli.dwt" />
+        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_woodpecker1.dwt" />
       </list>
     </option>
   </component>
@@ -384,12 +333,12 @@
       <workItem from="1482799172390" duration="17540000" />
       <workItem from="1482883982667" duration="18609000" />
       <workItem from="1482971648300" duration="15743000" />
-      <workItem from="1483057411817" duration="337000" />
+      <workItem from="1483057411817" duration="25730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121002000" />
+    <option name="totallyTimeSpent" value="146395000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -401,7 +350,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1034" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1034" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17966281" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -409,21 +358,21 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988626" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3180778" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858595" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -439,83 +388,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/components/modal/modal.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="26" lean-forward="true" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/user_content.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="969" column="104" lean-forward="false" selection-start-line="969" selection-start-column="97" selection-end-line="969" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/shop_index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/css/shop_index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" lean-forward="false" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../auto/build/webpack.dev.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/webpack.dev.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="19" column="16" lean-forward="true" selection-start-line="19" selection-start-column="16" selection-end-line="19" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../auto/build/dev-server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="69" column="44" lean-forward="true" selection-start-line="69" selection-start-column="44" selection-end-line="69" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/dev-server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="60" column="20" lean-forward="true" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/mobile/css/meixian_index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="31" column="15" lean-forward="false" selection-start-line="31" selection-start-column="15" selection-end-line="31" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/mobile/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="20" column="36" lean-forward="false" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/mobile/js/common.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="415" column="9" lean-forward="true" selection-start-line="415" selection-start-column="9" selection-end-line="415" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/popup/popup.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1900">
@@ -534,13 +406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="668">
           <caret line="1626" column="2" lean-forward="false" selection-start-line="1626" selection-start-column="2" selection-end-line="1626" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_newYear_popular.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="1328" column="17" lean-forward="false" selection-start-line="1328" selection-start-column="17" selection-end-line="1328" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -681,28 +546,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6851">
-          <caret line="405" column="44" lean-forward="false" selection-start-line="405" selection-start-column="21" selection-end-line="405" selection-end-column="44" />
-          <folding>
-            <element signature="e#8214#8266#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/module/about/about.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="40" column="50" lean-forward="false" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -717,16 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-867">
           <caret line="15" column="73" lean-forward="false" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/enter/enter.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2057">
-          <caret line="122" column="5" lean-forward="false" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
-          <folding>
-            <element signature="e#3463#3484#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -746,22 +583,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_basic_model.dwt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7191">
-          <caret line="423" column="18" lean-forward="false" selection-start-line="425" selection-start-column="20" selection-end-line="425" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://F:/wamp/www/emeixian/admin/templates/topic_model.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1819">
-          <caret line="107" column="33" lean-forward="false" selection-start-line="107" selection-start-column="33" selection-end-line="107" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://F:/wamp/www/emeixian/admin/js/topic.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2108">
@@ -770,18 +591,164 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_dealer_level_up.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="67" column="18" lean-forward="false" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_restaurant_level_up.dwt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2193">
+        <state relative-caret-position="17">
           <caret line="129" column="6" lean-forward="false" selection-start-line="129" selection-start-column="6" selection-end-line="129" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_dealer_level_up.dwt">
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_basic_model.dwt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="67" column="18" lean-forward="false" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <caret line="423" column="18" lean-forward="false" selection-start-line="425" selection-start-column="20" selection-end-line="425" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/style/detail.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="2741" column="13" lean-forward="false" selection-start-line="2741" selection-start-column="13" selection-end-line="2741" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/goods.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="519" column="23" lean-forward="false" selection-start-line="519" selection-start-column="23" selection-end-line="519" selection-end-column="23" />
+          <folding>
+            <marker date="1483062422007" expanded="true" signature="43630:43669" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/admin/templates/topic_model.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="117" column="35" lean-forward="false" selection-start-line="117" selection-start-column="35" selection-end-line="117" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../easy-vue/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="23" lean-forward="false" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../easy-vue/webpack.dev.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../easy-vue/app.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/enter/enter.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="138" column="21" lean-forward="false" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
+          <folding>
+            <element signature="e#3526#3547#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="20" column="42" lean-forward="false" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6851">
+          <caret line="405" column="44" lean-forward="false" selection-start-line="405" selection-start-column="21" selection-end-line="405" selection-end-column="44" />
+          <folding>
+            <element signature="e#8214#8266#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/js/onecart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_thanksgiving.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="494" column="25" lean-forward="true" selection-start-line="468" selection-start-column="6" selection-end-line="494" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/模板组件/topic_empty.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="100" column="32" lean-forward="false" selection-start-line="100" selection-start-column="32" selection-end-line="100" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_kangli.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="373" column="35" lean-forward="false" selection-start-line="373" selection-start-column="35" selection-end-line="373" selection-end-column="35" />
+          <folding>
+            <element signature="n#script#10;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_2017happy_new_year.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="306" column="4" lean-forward="false" selection-start-line="306" selection-start-column="4" selection-end-line="308" selection-end-column="5" />
+          <folding>
+            <element signature="n#script#6;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_newYear_popular.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="738" column="115" lean-forward="false" selection-start-line="738" selection-start-column="107" selection-end-line="738" selection-end-column="115" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_woodpecker1.dwt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="544" column="106" lean-forward="false" selection-start-line="544" selection-start-column="106" selection-end-line="544" selection-end-column="106" />
           <folding />
         </state>
       </provider>
