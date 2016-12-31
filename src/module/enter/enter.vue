@@ -4,7 +4,7 @@
         <div class="header">
         </div>
         <div class="carouselContainer">
-            <b-carousel :interval="5000" :controls="true" :indicators="true">
+            <b-carousel :interval="5000" :controls="false" :indicators="true">
                 <b-slide v-for="banner in banners">
                     <router-link v-bind:to="banner.bannerJump" class="jump_part">
                         <img v-bind:src="banner.bannersImg" >
@@ -15,7 +15,7 @@
 
         <div class="row ss-nav">
             <div class="col-25">
-                <router-link to="About" class="jump_part">
+                <router-link to="category" class="jump_part">
                     <div><img src="static/images/fenlei.png"></div>
                     <h1>商品分类</h1>
                 </router-link>
@@ -47,23 +47,23 @@
         </div>
 
         <div class="row list_container">
-            <p>{{dataNow}}分为您推荐已更新</p>
+            <p>{{ new Date().getHours()}}:{{new Date().getMinutes()}}为您推荐已更新</p>
             <div class="banner list_bg infinite-scroll infinite-scroll-bottom ">
                 <div class="m_two_col">
                     <div class="mc">
                         <div class="m_two_col">
                             <ul class="m_two_col-t list-container">
-                                <li>
+                                <li v-for="good in goods">
                                     <div class="module">
-                                        <a href="goods.php?id=3535" class="external">
+                                        <router-link to="/checkout" class="jump_part" v-bind:jsstr='good.goodsId'>
                                             <p class="img">
-                                                <img src="" alt="" class="" width="100%">
+                                                <img v-bind:src="good.goodsImg" alt="" class="" width="100%">
                                             </p>
                                             <div class="goods_price">
-                                                <em>￥263.00</em><s></s>
+                                                <em>￥{{good.goodsPrice}}</em><s></s>
                                             </div>
-                                            <p class="g_title">欧麦德 冷冻红薯泥 1kg/袋 12袋/箱</p>
-                                        </a>
+                                            <p class="g_title">{{good.goodsName}}</p>
+                                        </router-link>
                                     </div>
                                 </li>
                             </ul>
@@ -104,6 +104,56 @@
                     {text: '最新推荐',mxPage:3 },
                     {text: '促销专区',mxPage:4 },
                 ],
+                goods: [
+                    {goodsId: '795337',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795339',goodsName: '丽莎莉达牌意大利粉 丽歌制造 2.5kg/包 5包/箱',goodsUnit:'整箱',goodsPrice:'101.00',goodsNum:'2',goodsImg:'../../../static/images/2143_P_1449091000718.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '东古 蚝油 6kg/桶 2桶/箱',goodsUnit:'单桶',goodsPrice:'57.80',goodsNum:'1',goodsImg:'../../../static/images/2401_P_1460653361322.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '广味源 广味海鲜酱 255g/瓶 12瓶/箱',goodsUnit:'整箱',goodsPrice:'78.00',goodsNum:'1',goodsImg:'../../../static/images/2613_P_1464119690629.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '元盛 经典牛肉饼 1.8kg/袋（40片）4袋/箱',goodsUnit:'整箱',goodsPrice:'155.50',goodsNum:'1',goodsImg:'../../../static/images/2724_P_1470597064231.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '鼎丰 料酒王 500ml/瓶 12瓶/箱 ',goodsUnit:'单瓶',goodsPrice:'4.40',goodsNum:'11',goodsImg:'../../../static/images/3000_P_1473116647145.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                ],
+                  goods0: [
+                    {goodsId: '795337',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795339',goodsName: '丽莎莉达牌意大利粉 丽歌制造 2.5kg/包 5包/箱',goodsUnit:'整箱',goodsPrice:'101.00',goodsNum:'2',goodsImg:'../../../static/images/2143_P_1449091000718.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '东古 蚝油 6kg/桶 2桶/箱',goodsUnit:'单桶',goodsPrice:'57.80',goodsNum:'1',goodsImg:'../../../static/images/2401_P_1460653361322.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '广味源 广味海鲜酱 255g/瓶 12瓶/箱',goodsUnit:'整箱',goodsPrice:'78.00',goodsNum:'1',goodsImg:'../../../static/images/2613_P_1464119690629.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '元盛 经典牛肉饼 1.8kg/袋（40片）4袋/箱',goodsUnit:'整箱',goodsPrice:'155.50',goodsNum:'1',goodsImg:'../../../static/images/2724_P_1470597064231.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '鼎丰 料酒王 500ml/瓶 12瓶/箱 ',goodsUnit:'单瓶',goodsPrice:'4.40',goodsNum:'11',goodsImg:'../../../static/images/3000_P_1473116647145.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '795337',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                ],
+                goods1: [
+                    {goodsId: '333',goodsName: '广味源 广味海鲜酱 255g/瓶 12瓶/箱',goodsUnit:'整箱',goodsPrice:'78.00',goodsNum:'1',goodsImg:'../../../static/images/2613_P_1464119690629.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '111',goodsName: '元盛 经典牛肉饼 1.8kg/袋（40片）4袋/箱',goodsUnit:'整箱',goodsPrice:'155.50',goodsNum:'1',goodsImg:'../../../static/images/2724_P_1470597064231.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '444',goodsName: '鼎丰 料酒王 500ml/瓶 12瓶/箱 ',goodsUnit:'单瓶',goodsPrice:'4.40',goodsNum:'11',goodsImg:'../../../static/images/3000_P_1473116647145.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '555',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '123',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '321',goodsName: '丽莎莉达牌意大利粉 丽歌制造 2.5kg/包 5包/箱',goodsUnit:'整箱',goodsPrice:'101.00',goodsNum:'2',goodsImg:'../../../static/images/2143_P_1449091000718.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '222',goodsName: '东古 蚝油 6kg/桶 2桶/箱',goodsUnit:'单桶',goodsPrice:'57.80',goodsNum:'1',goodsImg:'../../../static/images/2401_P_1460653361322.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '666',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                ],
+                goods2: [
+                    {goodsId: '222',goodsName: '东古 蚝油 6kg/桶 2桶/箱',goodsUnit:'单桶',goodsPrice:'57.80',goodsNum:'1',goodsImg:'../../../static/images/2401_P_1460653361322.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '333',goodsName: '广味源 广味海鲜酱 255g/瓶 12瓶/箱',goodsUnit:'整箱',goodsPrice:'78.00',goodsNum:'1',goodsImg:'../../../static/images/2613_P_1464119690629.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '111',goodsName: '元盛 经典牛肉饼 1.8kg/袋（40片）4袋/箱',goodsUnit:'整箱',goodsPrice:'155.50',goodsNum:'1',goodsImg:'../../../static/images/2724_P_1470597064231.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '444',goodsName: '鼎丰 料酒王 500ml/瓶 12瓶/箱 ',goodsUnit:'单瓶',goodsPrice:'4.40',goodsNum:'11',goodsImg:'../../../static/images/3000_P_1473116647145.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '123',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '321',goodsName: '丽莎莉达牌意大利粉 丽歌制造 2.5kg/包 5包/箱',goodsUnit:'整箱',goodsPrice:'101.00',goodsNum:'2',goodsImg:'../../../static/images/2143_P_1449091000718.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '555',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '666',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                ],
+                goods3: [
+                    {goodsId: '111',goodsName: '元盛 经典牛肉饼 1.8kg/袋（40片）4袋/箱',goodsUnit:'整箱',goodsPrice:'155.50',goodsNum:'1',goodsImg:'../../../static/images/2724_P_1470597064231.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '444',goodsName: '鼎丰 料酒王 500ml/瓶 12瓶/箱 ',goodsUnit:'单瓶',goodsPrice:'4.40',goodsNum:'11',goodsImg:'../../../static/images/3000_P_1473116647145.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '123',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '321',goodsName: '丽莎莉达牌意大利粉 丽歌制造 2.5kg/包 5包/箱',goodsUnit:'整箱',goodsPrice:'101.00',goodsNum:'2',goodsImg:'../../../static/images/2143_P_1449091000718.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '222',goodsName: '东古 蚝油 6kg/桶 2桶/箱',goodsUnit:'单桶',goodsPrice:'57.80',goodsNum:'1',goodsImg:'../../../static/images/2401_P_1460653361322.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '333',goodsName: '广味源 广味海鲜酱 255g/瓶 12瓶/箱',goodsUnit:'整箱',goodsPrice:'78.00',goodsNum:'1',goodsImg:'../../../static/images/2613_P_1464119690629.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '555',goodsName: '香瓜 生态种植 不催熟',goodsUnit:'单斤',goodsPrice:'2.60',goodsNum:'5',goodsImg:'../../../static/images/3329_P_1477943781488.jpg',goodsUrl:'goods.php?id=795337'},
+                    {goodsId: '666',goodsName: '蒜米 去皮蒜瓣 蒜头 无公害 ',goodsUnit:'单斤',goodsPrice:'8.10',goodsNum:'19',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'}
+                ],
                 showVariable:false,
                 selected: 0,
                 dataNow:'09:37'
@@ -113,6 +163,20 @@
         methods: {
             choose:function (index) {
                 this.selected = index
+                let page = index
+                if(page==0){
+                    this.goods = this.goods0
+                }
+                if(page==1){
+                    this.goods = this.goods1
+                }
+                if(page==2){
+                    this.goods = this.goods2
+                }
+                if(page==3){
+                    this.goods = this.goods3
+                }
+
             },
             open:function () {
                this.showVariable = false
@@ -211,6 +275,201 @@
         color #1EAA39
         padding-bottom 0
         border-bottom 3px solid #1EAA39
+
+.list_container
+        display block
+     p
+        width 90%
+        display block
+        font-size 12px
+        color rgb(153, 153, 153)
+        font-family "Microsoft Yahei"
+        margin 15px auto 3px
+    .list_bg
+         ul
+            width 95%
+            min-width 320px
+            padding-left 20px
+            padding-right 5px
+            display block
+            margin 0 auto
+            overflow hidden
+         li
+            width 49%
+            display inline-block
+            float left
+            margin-left 5px
+            margin-top 5px
+            overflow visible
+            position relative
+        .goods_name
+            width 100%
+            height 2.4em
+            margin 0 auto
+            text-overflow ellipsis
+            color black
+            overflow hidden
+            font-size 1em
+            font-weight bold
+            background-color #fff
+            text-align center
+            vertical-align middle
+        .goods_price
+            width 100%
+            height 20%
+            color #ee242c
+            padding-top 5px
+            padding-bottom 5px
+            font-size 18px
+            font-weight normal
+            background-color #fff
+            text-align left
+            vertical-align middle
+             em
+                float left
+             s
+                float left
+                color #999999
+                text-align left
+                text-decoration none
+                font-size 14px
+                text-indent 5px
+                line-height 2em
+    .btn
+        width 100%
+        height 35%
+        display block
+    .choice_loft
+        position relative
+        bottom 3rem
+        width 70%
+        height 3rem
+        display block
+        margin 0 auto
+    .module .img span
+        width 100%
+        height 1.4em
+        displayblock
+        color #fff
+        margin 0 auto
+        padding-top 3px
+        padding-left 5px
+        font-size 0.875em
+        font-family"Microsoft YaHei"
+        background-color #333333
+        filter Alpha(opacity=40)
+        -moz-opacity 0.40
+        opacity 0.40
+        text-align left
+        vertical-align middle
+        overflow hidden
+        text-wrap normal
+        line-height 1em
+    .detail
+        width 100%
+        height 50%
+        display block
+    .m_two_col *
+        -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+        -webkit-box-sizing border-box
+        -moz-box-sizing border-box
+        -ms-box-sizing border-box
+        box-sizing border-box
+
+    .m_two_col
+        a
+         display block
+    .m_two_col
+        font-size 14px
+        width 100%
+        min-width 320px
+    .m_two_col-t
+        li
+            overflow hidden
+            margin 0 auto
+            margin-top 2%
+    .m_two_col-t linth-child(even)
+        margin-top 2%
+        float right
+    .module
+        height21em
+        margin-right 2%
+        float left
+        background-color #FFF
+        padding .7em .5em
+        width 100%
+        box-shadow 0 1px 1px 0px rgba(0, 0, 0, .2)
+        border 1px solid rgba(0, 0, 0, .1)
+    .module2
+        margin-right 2%
+        float left
+        background-color #FFF
+        padding .7em .5em
+        width 100%
+        box-shadow 0 1px 1px 0px rgba(0, 0, 0, .2)
+        border 1px solid rgba(0, 0, 0, .1)
+    .module2 img
+        width 100%
+    .modulelast-child
+        margin-right 0px
+    .module .img
+        vertical-align middle
+        text-align center
+        overflow hidden
+        padding 2px
+    .module .img img
+        width 100%
+    .module .g_title
+        font-size .857em
+        height 2.6em
+        line-height 1.4em
+        overflow hidden
+        color #333333
+        width 100%
+        margin-top 6px
+        text-align left
+        word-break break-all
+        color #2F2F2F!important
+    .module
+        .g_price
+            font-size 1.07em
+            color #f75d57
+            text-align left
+         .jdNum
+             font-weight bold
+    .scroll_more
+        p
+            text-align center
+//            提示符
+.infinite-scroll-preloader
+    margin 0.5rem
+    text-align: center
+.preloader
+    width 3rem
+    height 3rem
+    display inline-block
+    -webkit-animation preloader-spin 1s steps(12, end) infinite
+    animation preloader-spin 1s steps(12, end) infinite
+    -webkit-transform-origin 50%
+    transform-origin 50%
+.preloader:after
+    display block
+    content ""
+    width 100%
+    height 100%
+    background url(/static/images/placeholder.svg)
+    background-position 50%
+    background-size 100%
+    background-repeat no-repeat
+    @-webkit-keyframes preloader-spin
+        100%
+            -webkit-transform rotate(360deg)
+
+
+    @keyframes preloader-spin
+        100%
+            -webkit-transform rotate(360deg)
+            transform rotate(360deg)
 
 
 </style>

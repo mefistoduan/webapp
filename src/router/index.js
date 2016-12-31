@@ -21,6 +21,7 @@ import cart from '../module/cart/cart.vue'
 import test from '../module/test/test.vue'
 import test2 from '../module/test/test2.vue'
 import finish from '../module/finish/finish.vue'
+import category from '../module/category/category.vue'
 import checkout from '../module/checkout/checkout.vue'
 
 export default new Router({
@@ -52,6 +53,7 @@ export default new Router({
     { path: '/test', component: test },
     { path: '/test2', component: test2 },
     { path: '/finish', component: finish },
+    { path: '/category', component: category },
     { path: '/AddressList', redirect: '/AddressList' },
     { path: '/topic-verify', component: topicVerify }
   ]

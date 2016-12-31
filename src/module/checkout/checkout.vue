@@ -444,6 +444,8 @@
           white-space nowrap
           overflow hidden
           s,i
+            float left
+            margin-right 10px
             text-decoration none
             font-style normal
         span

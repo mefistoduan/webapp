@@ -41,23 +41,21 @@ import EgdSideBar from 'sidebar'
     font-size 15px
     margin 0
     padding-top 65px
-
   a
     color #34495e
     text-decoration none
-
   .header
     width 100%
     background-color #5cb85c
     position fixed
-    z-index 4
+    z-index 20
     top 0
     left 0
     right 0
     .inner
       overflow hidden
       dislay block
-      max-width 800px
+      max-width 360px
       box-sizing border-box
       margin 3px auto
       z-index 2
@@ -98,10 +96,11 @@ import EgdSideBar from 'sidebar'
     float left
 
   .view
+    width  100%
+    overflow hidden
+    display block
     max-width 800px
     margin 0 auto
-    position relative
-
   .fade-enter-active, .fade-leave-active
     transition all .2s ease
 
@@ -110,7 +109,7 @@ import EgdSideBar from 'sidebar'
 
   @media (max-width 860px)
     .header .inner
-      padding 15px 30px
+      padding 15px 0px
 
   @media (max-width 600px)
     body
@@ -118,8 +117,8 @@ import EgdSideBar from 'sidebar'
     .header
       .inner
         pading 15px
-        padding-left 5px
-        padding-right 5px
+        padding-left 1px
+        padding-right 1px
       a
         margin-right 1em
       .github
