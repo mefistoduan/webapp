@@ -357,10 +357,10 @@
                     color #333
                     font-size 1.75rem
                     i
-                    float right
-                    font-style normal
-                    margin-left 0.5em
-                    line-height 6.125rem
+                     float right
+                     font-style normal
+                     margin-left 0.5em
+                     line-height 6.125rem
     .shoppting-checkbox
         appearance none
         -moz-appearance none

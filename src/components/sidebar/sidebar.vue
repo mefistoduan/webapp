@@ -9,9 +9,21 @@
       <!--侧边栏列表-->
       <div class="sidebar-list">
         <ul class="menu-fixed-list" style="display: block;">
-          <li class="fore01"><a href="index.php" class="external">首页</a></li>
-          <li class="fore02"><a href="search.php" class="external">搜索</a></li>
-          <li class="fore03"><a href="user.php" class="external">我的美鲜</a></li>
+          <li class="fore01">
+            <router-link to="/" class="jump_part">
+              首页
+            </router-link>
+          </li>
+          <li class="fore02">
+            <router-link to="/category" class="jump_part">
+              列表
+            </router-link>
+          </li>
+          <li class="fore03">
+            <router-link to="/About" class="jump_part">
+              设置
+            </router-link>
+          </li>
         </ul>
       </div>
     </div>
@@ -83,7 +95,13 @@
         overflow: hidden;
         display: block;
         font-size:14px;
+        padding-top: 5px;
+        padding-bottom: 5px;
         a{
+          width:  100%;
+          height: 100%;
+          display: block;
+          text-align: center;
           color:#5cb85c;
         }
 

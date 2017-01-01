@@ -48,7 +48,7 @@ import EgdSideBar from 'sidebar'
     width 100%
     background-color #5cb85c
     position fixed
-    z-index 20
+    z-index 5
     top 0
     left 0
     right 0
