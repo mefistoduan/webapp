@@ -4,7 +4,7 @@
       <div class="inner">
         <button class="logo btn btn-success btn-md" alt="logo" @click="showBar"><i class="glyphicon glyphicon-align-justify"></i></button>
         <form action="" class="bs-example bs-example-form">
-        <div class=" col-xs-8 search_part">
+        <div class=" col-xs-7 search_part">
           <span class="icon_question"><i class="glyphicon glyphicon-search"></i></span>
           <input type="text" class="search_content" placeholder="试试薯条+奶酪">
           <button class="search_content_button">搜索</button>
@@ -143,7 +143,7 @@ import EgdSideBar from 'sidebar'
   i
     display block
 .search_content
-  width 60%
+  width 55%
   height 30px
   border none
   line-height 30px

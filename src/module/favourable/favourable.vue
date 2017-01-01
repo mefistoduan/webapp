@@ -3,43 +3,6 @@
     <div class="enter">
         <div class="header">
         </div>
-        <div class="carouselContainer">
-            <b-carousel :interval="5000" :controls="false" :indicators="true">
-                <b-slide v-for="banner in banners">
-                    <router-link v-bind:to="banner.bannerJump" class="jump_part">
-                        <img v-bind:src="banner.bannersImg" >
-                    </router-link>
-                </b-slide>
-            </b-carousel>
-        </div>
-
-        <div class="row ss-nav">
-            <div class="col-25">
-                <router-link to="category" class="jump_part">
-                    <div><img src="static/images/fenlei.png"></div>
-                    <h1>商品分类</h1>
-                </router-link>
-            </div>
-            <div class="col-25">
-                <router-link to="favourable" class="jump_part">
-                    <div><img src="static/images/meixianhui.png"></div>
-                    <h1>美鲜惠</h1>
-                </router-link>
-            </div>
-            <div class="col-25">
-                <router-link to="example" class="jump_part">
-                    <div><img src="static/images/yangpinshenling.png"></div>
-                    <h1>样品申领</h1>
-                </router-link>
-            </div>
-            <div class="col-25">
-                <router-link to="About" class="jump_part">
-                    <div><img src="static/images/gerenzhongxin.png"></div>
-                    <h1>我的美鲜</h1>
-                </router-link>
-            </div>
-        </div>
-
         <div class="tabs_index">
             <ul>
                 <li v-for="(tab,index) in tabs" v-bind:class="{curr:index === selected}" @click="choose(index)"><a href="javascript:void(0);" v-bind:mxPage="tabs.mxPage">{{tab.text}}</a></li>
@@ -99,10 +62,11 @@
                     {text: '麦肯',bannersImg:'static/images/1482685485360379362.jpg',bannerJump:'/brands' }
                 ],
                 tabs: [
-                    {text: '美鲜首发',mxPage:1 },
-                    {text: '预售专区',mxPage:2 },
-                    {text: '最新推荐',mxPage:3 },
-                    {text: '促销专区',mxPage:4 },
+                    {text: '秒杀专区',mxPage:1 },
+                    {text: '爆款直降',mxPage:2 },
+                    {text: '闪购',mxPage:3 },
+                    {text: '聚食惠',mxPage:4 },
+                    {text: '抄底价特卖',mxPage:5 }
                 ],
                 goods: [
                     {goodsId: '795337',goodsName: '辣西西里 意大利面#5面条 意大利进口 3千克/袋 4袋/箱',goodsUnit:'单袋',goodsPrice:'37.40',goodsNum:'3',goodsImg:'../../../static/images/289_P_1451863294067.jpg',goodsUrl:'goods.php?id=795337'},
@@ -175,6 +139,9 @@
                 }
                 if(page==3){
                     this.goods = this.goods3
+                }
+                if(page==4){
+                    this.goods = this.goods2
                 }
 
             },
@@ -252,7 +219,7 @@
     margin 0
     padding 0
   li
-    width 25%
+    width 20%
     float left
     height 100%
     list-style none
@@ -464,8 +431,6 @@
     @-webkit-keyframes preloader-spin
         100%
             -webkit-transform rotate(360deg)
-
-
     @keyframes preloader-spin
         100%
             -webkit-transform rotate(360deg)
