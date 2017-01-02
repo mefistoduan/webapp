@@ -55,7 +55,7 @@
                             <ul class="m_two_col-t list-container">
                                 <li v-for="good in goods">
                                     <div class="module">
-                                        <router-link to="/checkout" class="jump_part" v-bind:jsstr='good.goodsId'>
+                                        <router-link to="/detail" class="jump_part" v-bind:jsstr='good.goodsId'>
                                             <p class="img">
                                                 <img v-bind:src="good.goodsImg" alt="" class="" width="100%">
                                             </p>
