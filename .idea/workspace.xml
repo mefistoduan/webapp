@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/webapp_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/webapp.iml" afterPath="$PROJECT_DIR$/.idea/webapp.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/app.ea4b49877462a309b3efd9b931f21096.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/app.ea4b49877462a309b3efd9b931f21096.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/components.0207d0cdd46d88889ea0a4fdff04b027.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/components.0207d0cdd46d88889ea0a4fdff04b027.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/app.1e1625aa16ab3dc0046f.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/app.1e1625aa16ab3dc0046f.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/components.731e5de98c84a3b54b1b.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/components.731e5de98c84a3b54b1b.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/element.7b9c89683777ac55b9d8.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/element.7b9c89683777ac55b9d8.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/manifest.fffae60fd92ca593e402.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/manifest.fffae60fd92ca593e402.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/vendor.c4e0b9dc942cb0387bad.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/vendor.c4e0b9dc942cb0387bad.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/sidebar/sidebar.vue" afterPath="$PROJECT_DIR$/src/components/sidebar/sidebar.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/cart/cart.vue" afterPath="$PROJECT_DIR$/src/module/cart/cart.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/example/example.vue" afterPath="$PROJECT_DIR$/src/module/example/example.vue" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/index/App.vue" afterPath="$PROJECT_DIR$/src/module/index/App.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/index.html" afterPath="$PROJECT_DIR$/assets/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/detail/detail.vue" afterPath="$PROJECT_DIR$/src/module/detail/detail.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,7 +46,7 @@
       <file leaf-file-name="example.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/module/example/example.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6034484">
+            <state vertical-scroll-proportion="0.0">
               <caret line="118" column="32" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
               <folding />
             </state>
@@ -48,18 +56,38 @@
       <file leaf-file-name="checkout.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="19.933332">
+            <state vertical-scroll-proportion="0.0">
               <caret line="732" column="10" selection-start-line="732" selection-start-column="7" selection-end-line="732" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.075179">
+            <state vertical-scroll-proportion="0.0">
               <caret line="362" column="21" selection-start-line="362" selection-start-column="21" selection-end-line="362" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="detail.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/detail/detail.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="108" selection-start-line="39" selection-start-column="108" selection-end-line="39" selection-end-column="108" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enter.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/module/enter/enter.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="2.33829">
+              <caret line="156" column="35" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -122,7 +150,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/module/detail/detail.vue" />
         <option value="$PROJECT_DIR$/src/module/topic/help.vue" />
         <option value="$PROJECT_DIR$/src/module/topic/topic-loan.vue" />
         <option value="$PROJECT_DIR$/src/module/topic/topic-verify.vue" />
@@ -173,6 +200,7 @@
         <option value="$PROJECT_DIR$/src/module/index/App.vue" />
         <option value="$PROJECT_DIR$/src/module/example/example.vue" />
         <option value="$PROJECT_DIR$/src/module/cart/cart.vue" />
+        <option value="$PROJECT_DIR$/src/module/detail/detail.vue" />
       </list>
     </option>
   </component>
@@ -381,6 +409,30 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/module/example/example.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="32" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="732" column="10" selection-start-line="732" selection-start-column="7" selection-end-line="732" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/popup/popup.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -423,14 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/enter/enter.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="138" column="21" selection-start-line="138" selection-start-column="21" selection-end-line="138" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -442,7 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.16229117">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -450,7 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -458,7 +500,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19554456">
           <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -466,7 +507,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13242574">
           <caret line="210" column="28" selection-start-line="210" selection-start-column="28" selection-end-line="210" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -474,13 +514,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1474359">
           <caret line="48" column="6" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/example/example.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6034484">
+        <state vertical-scroll-proportion="0.0">
           <caret line="118" column="32" selection-start-line="118" selection-start-column="32" selection-end-line="118" selection-end-column="32" />
           <folding />
         </state>
@@ -488,7 +527,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/checkout/checkout.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="19.933332">
+        <state vertical-scroll-proportion="0.0">
           <caret line="732" column="10" selection-start-line="732" selection-start-column="7" selection-end-line="732" selection-end-column="10" />
           <folding />
         </state>
@@ -496,8 +535,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.075179">
+        <state vertical-scroll-proportion="0.0">
           <caret line="362" column="21" selection-start-line="362" selection-start-column="21" selection-end-line="362" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/detail/detail.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="108" selection-start-line="39" selection-start-column="108" selection-end-line="39" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/enter/enter.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.33829">
+          <caret line="156" column="35" selection-start-line="156" selection-start-column="16" selection-end-line="156" selection-end-column="35" />
           <folding />
         </state>
       </provider>
