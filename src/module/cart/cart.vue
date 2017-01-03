@@ -13,8 +13,8 @@
                         <input type="checkbox" class="shoppting-checkbox" v-bind:checked="shouldCheck" name="rec_id[]" v-bind:value="item.goodsId">
                     </div>
                     <div class="li_warp">
-                        <a v-bind:href="item.goodsUrl"> <img v-bind:src="item.goodsImg" alt=""></a>
-                        <p class="goods_name"><a v-bind:href="item.goodsUrl">{{item.goodsName}}</a></p>
+                        <router-link to="/detail"> <img v-bind:src="item.goodsImg" alt=""></router-link>
+                        <p class="goods_name"><router-link to="/detail">{{item.goodsName}}</router-link></p>
                         <span class="unite">{{item.goodsUnit}}</span>
                         <p class="price_container">
                             <s class="price" alt="37.40">￥{{item.goodsPrice}}</s>
@@ -202,6 +202,7 @@
                 display block
                 a
                     float left
+                    line-height 16px
                 .goods_checkbox_item
                     width 10px
                     margin-left 5px

@@ -24,6 +24,8 @@ import finish from '../module/finish/finish.vue'
 import category from '../module/category/category.vue'
 import favourable from '../module/favourable/favourable.vue'
 import example from '../module/example/example.vue'
+import orderlist from '../module/orderlist/orderlist.vue'
+import orderdetail from '../module/orderdetail/orderdetail.vue'
 import checkout from '../module/checkout/checkout.vue'
 
 export default new Router({
@@ -58,6 +60,8 @@ export default new Router({
     { path: '/category', component: category },
     { path: '/favourable', component: favourable },
     { path: '/example', component: example },
+    { path: '/orderlist', component: orderlist},
+    { path: '/orderdetail', component: orderdetail},
     { path: '/AddressList', redirect: '/AddressList' },
     { path: '/topic-verify', component: topicVerify }
   ]

@@ -16,7 +16,7 @@
         <div class="order_tips" style="margin-bottom:0px">
             <p>请收货时核对产品和数量与订单产品是否一致！</p>
         </div>
-        <router-link to="/finish" class="jump_part bottom_link">
+        <router-link to="/order" class="jump_part bottom_link">
             <p>
             <div autocomplete="off" value="done" class="sub_btn_y sub_btn">查看订单</div>
             </p>

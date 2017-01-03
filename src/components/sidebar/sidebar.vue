@@ -24,6 +24,11 @@
               设置
             </router-link>
           </li>
+          <li class="fore03">
+            <router-link to="/orderlist" class="jump_part">
+              订单列表
+            </router-link>
+          </li>
         </ul>
       </div>
     </div>
