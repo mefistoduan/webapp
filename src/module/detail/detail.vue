@@ -6,7 +6,7 @@
             </ul>
         </div>
 
-        <div class="carouselContainer">
+        <div class="carouselContainer" v-show="tab01">
             <b-carousel :interval="5000" :controls="false" :indicators="true">
                 <b-slide v-for="banner in banners">
                         <img v-bind:src="banner.bannersImg" >
@@ -14,7 +14,7 @@
             </b-carousel>
         </div>
 
-        <div class="detail_content">
+        <div class="detail_content" v-show="tab01">
             <p class="dc_name"  id="detail_goods_name">
                 <em>[ID:05626] </em>{{goodsName}}</p>
             <div class="dc_price">
@@ -104,6 +104,11 @@
                 </table>
             </div>
         </div>
+        <div class="detail_img" v-show="tab02">
+            <img v-bind:src="img.src" alt="" v-for="img in imgs">
+        </div>
+        <p class="evaluate" v-show="tab03">该商品暂无评价</p>
+        <div class="" v-show="tab03"></div>
         <nav class="bar bar-tab foot-nav">
             <a class=" external tab_item_small" href="javascript:;" @click="collect">
                 <span><img class="icon icon_attention" v-bind:src="attentionImg"></span>
@@ -113,23 +118,61 @@
                 <img class="icon icon_cart" src="../../../static/images/detail/gouwuche.png">
                 <span class="tab-label">购物车</span>
             </router-link>
-            <a class="tab-item external orange_btn open-about" href="#">
+            <a class="tab-item external orange_btn open-about" href="#" @click="showPopup">
                 <span class="tab-label">立即购买</span>
             </a>
-            <a class="tab-item external green_btn open-about" href="#">
+            <a class="tab-item external green_btn open-about" href="#" @click="showPopup">
                 <span class="tab-label">加入购物车</span>
             </a>
         </nav>
+        <!--popup-->
+        <popup v-bind:title="popup.popupName" :show.sync="show" @ok="ok($index)" @cancel="cancel" cancelText="取消" okText="确定">
+            <div class="content-block">
+                <div class="dc_price">
+                    <span class="red_price">￥81.6</span>
+                    <span class="gary_price" style="display: none;"></span>
+                </div>
+                <div class="choice_popup">
+                    <h5>选择仓库</h5>
+                        <ul class="choic_city">
+                            <li class="curr">
+                                <a href="javascript:void(0)" id="jinan_store" title="济南仓库">[济南仓]剩余<span id="jn_stock">{{goodsNum}}</span></a>
+                            </li>
+                        </ul>
+                        <h5>选择规格</h5>
+                        <ul class="unite_ul">
+                            <li class="curr">
+                                <a href="javascript:void(0)">
+                                    单袋
+                                </a>
+                            </li>
+                        </ul>
+                    <h5>购买数量</h5>
+                    <div class="pop_info">
+                        <div class="calc_num">
+                            <a class="btn_reduce" @click="reduce(index)">-</a>
+                            <input name="number" type="text" class="text" v-bind:value="goodsOrdNum">
+                            <input type="hidden" name="miaosha_attr" value="">
+                            <a class="btn_add" @click="add(index)">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </popup>
     </div>
 </template>
 
 <script>
     import Vue from 'vue'
     import BootstrapVue from 'bootstrap-vue'
+    import popup from '../../components/popup/popup.vue'
     Vue.use(BootstrapVue)
     export default {
         data() {
             return {
+                popup: {
+                    popupName:'购买菜单'
+                },
                 items: [
                 {text: '麦肯',brandsImg:'static/images/2724_P_1470597064231.jpg' }
                 ],
@@ -138,6 +181,13 @@
                 {text: '图文详情',mxPage:2 },
                 {text: '评价(0)',mxPage:3 }
                 ],
+                imgs: [
+                    {text: '详情',src:'static/images/detail/pic01.jpg' },
+                    {text: '详情',src:'static/images/detail/pic02.jpg' },
+                    {text: '详情',src:'static/images/detail/pic03.jpg' },
+                    {text: '详情',src:'static/images/detail/pic04.jpg' },
+                    {text: '详情',src:'static/images/detail/pic05.jpg' }
+                ],
                 banners: [
                 {text: '麦肯',bannersImg:'static/images/detail/2801_thumb_P_1467940646393.jpg',bannerJump:'/brands' },
                 {text: '麦肯',bannersImg:'static/images/detail/2801_thumb_P_1467997974638.jpg',bannerJump:'/brands' },
@@ -145,6 +195,7 @@
                 ],
                 selected: 0,
                 goodsNum: 12,
+                goodsOrdNum: 1,
                 goodsName:'欧萨 混合油橄榄果渣油 意大利进口 1L/瓶 12瓶/箱',
                 language:'detail_English',
                 oenglish:"OUSA POMACE OLIVE OIL imported from Italy 1L/bottle 12bottles/carton",
@@ -161,21 +212,31 @@
                 attentionImg:'../../../static/images/detail/shoucang.png',
                 attention:'../../../static/images/detail/shoucang.png',
                 attentioned:'../../../static/images/detail/shoucang_fill.png',
-                showVariable:false
+                showVariable:false,
+                tab01:true,
+                tab02:false,
+                tab03:false,
+                show:false
             }
         },
         methods: {
         choose:function (index) {
                 this.selected = index
                 let page = index
+                this.tab01=false
+                this.tab02=false
+                this.tab03=false
                 if(page==0){
                     this.goods = this.goods0
+                    this.tab01= true
                 }
                 if(page==1){
                     this.goods = this.goods1
+                    this.tab02= true
                 }
                 if(page==2){
                     this.goods = this.goods2
+                    this.tab03= true
                 }
             },
         turnName:function(){
@@ -189,17 +250,52 @@
             }
             },
         collect:function(){
-            if( this.attentionInfo == '关注' ){
-                this.attentionInfo = '已关注'
-                this.attentionImg = this.attentioned
-            }
-            else{
-                this.attentionInfo = '关注'
-                this.attentionImg = this.attention
-            }
+                if( this.attentionInfo == '关注' ){
+                    this.attentionInfo = '已关注'
+                    this.attentionImg = this.attentioned
+                }
+                else{
+                    this.attentionInfo = '关注'
+                    this.attentionImg = this.attention
+                    }
+            },
+            ok(popup) {
+                this.show = false
+            },
+            cancel(popup) {
+                this.show = false
+            },
+            showPopup:function () {
+                this.show = true
+            },
+            add:function() {
+                let max = this.goodsNum
+                let  n = this.goodsOrdNum
+                if(n<max){
+                    n++
+                }
+                else{
+                    n=max
+                    this.showVariable = false
+                    this.showVariable = true
+                }
+                this.goodsOrdNum = n
+            },
+            reduce:function(index) {
+                let  n = this.goodsOrdNum
+                if(n>0){
+                    n--
+                }
+                else{
+                    n=0
+                    this.showVariable = false
+                    this.showVariable = true
+                }
+                this.goodsOrdNum = n
             }
         },
         components: {
+            popup
         }
     }
 </script>
@@ -312,7 +408,7 @@
     z-index 10
     right 6px
     bottom -4px
-    background url(../../../static/images/detail/EN.png) no-repeat top right
+    background url(../../../static/images/detail/EN.png) no-repeat top center
     cursor pointer
     color #999
     font-size 12px
@@ -325,7 +421,7 @@
     z-index 10
     right 6px
     bottom -4px
-    background url(../../../static/images/detail/CH.png) no-repeat top right
+    background url(../../../static/images/detail/CH.png) no-repeat top center
     background-size 100% 100%
     cursor pointer
     color #999
@@ -440,7 +536,10 @@ em
         padding 2px 5px
         border-radius: 4px
         float left
-
+.detail_img
+    img
+        width 100%
+        overflow hidden
     /*nav*/
 .bar-tab
     position fixed
@@ -516,4 +615,85 @@ em
     padding-right 10px
     .tab-label
         color #fff
+/*popup*/
+.content-block
+    overflow-y scroll
+    margin-top 60px
+    .red_price
+        font-size 14px
+        display inline
+        line-height 1.5em
+        float left
+        color #E3462C
+        font-weight bold
+.choice_popup
+    h5
+        font-size 16px
+        color #333333
+        font-weight normal
+        margin-top 3px
+        margin-bottom 3px
+    ul
+        width 100%
+        height 2.5em
+        display block
+        margin 0 auto
+        li
+            margin-right 20px
+        li.curr
+            width auto
+            padding 5px 10px
+            float left
+            border 1px solid #1EAA39
+            color #1EAA39
+            a
+                color #1EAA39
+            span
+                float right
+                margin-left 10px
+.evaluate
+    text-align center
+    padding-top 10px
+//   calc
+.calc_num
+    max-width 10.625rem
+    height 1.875rem
+    display block
+    float left
+    margin-right 0.5rem
+
+    .btn_reduce
+        width 24px
+        height 30px
+        float left
+        border 1px solid #ddd
+        text-align center
+        line-height 30px
+        text-decoration none
+    .btn_add
+        width 24px
+        height 30px
+        float left
+        border 1px solid #ddd
+        text-align center
+        line-height 30px
+        text-decoration none
+    input.text
+        width 40px
+        height 30px
+        float left
+        display inline-block
+        box-sizing border-box
+        border 1px solid #dddddd
+        border-left none
+        border-right none
+        text-align center
+        color #E3462C
+        -webkit-appearance none
+        border-radius 0
+.alert
+    position fixed
+    right 0
+    left 0
+    top 10%
 </style>
