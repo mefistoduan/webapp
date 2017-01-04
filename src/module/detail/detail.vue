@@ -618,7 +618,7 @@ em
 /*popup*/
 .content-block
     overflow-y scroll
-    margin-top 60px
+    margin-top 40px
     .red_price
         font-size 14px
         display inline
@@ -635,11 +635,13 @@ em
         margin-bottom 3px
     ul
         width 100%
-        height 2.5em
+        height 2.8em
         display block
         margin 0 auto
         li
+            height 2.6em
             margin-right 20px
+            overflow hidden
         li.curr
             width auto
             padding 5px 10px
@@ -647,7 +649,11 @@ em
             border 1px solid #1EAA39
             color #1EAA39
             a
+                width 100%
+                height 2.6em
+                float left
                 color #1EAA39
+
             span
                 float right
                 margin-left 10px

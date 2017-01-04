@@ -92,11 +92,11 @@
         data() {
             return {
                 banners: [
-                    {text: '麦肯',bannersImg:'static/images/1480704535579815975.jpg',bannerJump:'/brands' },
-                    {text: '麦肯',bannersImg:'static/images/1481491446967373839.jpg',bannerJump:'/brands' },
-                    {text: '麦肯',bannersImg:'static/images/1482425512746257286.jpg',bannerJump:'/brands' },
+                    {text: '麦肯',bannersImg:'static/images/1480704535579815975.jpg',bannerJump:'/topic-verify' },
+                    {text: '麦肯',bannersImg:'static/images/1481491446967373839.jpg',bannerJump:'/topic-loan' },
+                    {text: '麦肯',bannersImg:'static/images/1482425512746257286.jpg',bannerJump:'/help' },
                     {text: '麦肯',bannersImg:'static/images/1482685600145886603.jpg',bannerJump:'/brands' },
-                    {text: '麦肯',bannersImg:'static/images/1482685485360379362.jpg',bannerJump:'/brands' }
+                    {text: '麦肯',bannersImg:'static/images/1482685485360379362.jpg',bannerJump:'/detail' }
                 ],
                 tabs: [
                     {text: '美鲜首发',mxPage:1 },
