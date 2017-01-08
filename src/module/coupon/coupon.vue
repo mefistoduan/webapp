@@ -3,25 +3,25 @@
         <div class="header">
         </div>
         <div class="pepper-con" >
-            <div class="pepper-w"   v-for="item in items">
-                <div class="pepper" v-bind:class="item.typeColor" >
+            <div class="pepper-w"   v-for="coupon in coupons">
+                <div class="pepper" v-bind:class="coupon.typeColor" >
                     <div class="pepper-l">
                         <p class="pepper-l-num">
-                            <i>¥</i><span> {{item.saleNum}}</span><i>.00</i>（满{{item.sumNum}}.00可用）
+                            <i>¥</i><span> {{coupon.saleNum}}</span><i>.00</i>（满{{coupon.sumNum}}.00可用）
                         </p>
-                        <p class="pepper-l-con">使用范围：{{item.scope}}</p>
+                        <p class="pepper-l-con">使用范围：{{coupon.scope}}</p>
                     </div>
                     <div class="pepper-r">
-                        <span>{{item.type}}</span>
+                        <span>{{coupon.type}}</span>
                         <div>
-                            {{item.startData}}
+                            {{coupon.startData}}
                             <p class="pepper-line">~</p>
-                            {{item.endDate}}
+                            {{coupon.endDate}}
                         </div>
                         <i class="right-arrow"></i>
                     </div>
                 </div>
-                <div class="pepper-b" v-bind:class="item.typeColor">
+                <div class="pepper-b" v-bind:class="coupon.typeColor">
                     <div class="pb-con"></div>
                     <div class="pb-border"></div>
                 </div>
@@ -34,6 +34,7 @@
 </template>
 
 <script>
+    import {getCoupons} from '../../api/coupon'
     export default {
         data() {
             return {
@@ -45,27 +46,19 @@
                     startData:'',
                     endDate:''
                 },
-                items: [
-                    {saleNum: '20',sumNum:'300',scope:'芝士类产品除外',type:'全场通用',typeColor:'pepper-blue',startData:' 2016.12.05',endDate:' 2016.12.12' },
-                    {saleNum: '40',sumNum:'500',scope:'芝士类产品除外',type:'双12大促',typeColor:'pepper-red',startData:' 2016.12.05',endDate:' 2016.12.12' },
-                    {saleNum: '2',sumNum:'50',scope:'芝士类产品除外',type:'新客户专享',typeColor:'pepper-blue',startData:' 2016.11.05',endDate:' 2016.12.12' },
-                    {saleNum: '11',sumNum:'200',scope:'仅限抄码产品使用',type:'抄码专用',typeColor:'pepper-yellow',startData:' 2016.12.05',endDate:' 2016.12.12' },
-                    {saleNum: '200',sumNum:'1200',scope:'仅限餐厅级用户使用',type:'餐厅专享',typeColor:'pepper-blue',startData:' 2016.12.05',endDate:' 2016.12.12' },
-                    {saleNum: '60',sumNum:'310',scope:'芝士类产品除外',type:'已过期',typeColor:'pepper-gary',startData:' 2016.11.05',endDate:' 2016.11.12' },
-                    {saleNum: '20',sumNum:'30',scope:'仅限济南地区使用',type:'济南专享',typeColor:'pepper-blue',startData:' 2016.12.05',endDate:' 2016.12.12' },
-                    {saleNum: '20',sumNum:'0',scope:'抄码产品除外',type:'邮费抵扣',typeColor:'pepper-green',startData:' 2016.12.05',endDate:' 2016.12.12' },
-                ],
+                coupons: [ ],
             }
-
         },
-
+  beforeMount(){
+          getCoupons(this.$router.currentRoute.params.id).then(value => {
+              this.coupons = value
+            })
+          },
         components: {
         }
 
     }
 </script>
-
-
 <style lang="stylus" rel="stylesheet/stylus" scoped>
     body
         padding-top 5px
@@ -96,7 +89,7 @@
                     font-family verdana
                     i
                         font-size 21px
-
+                        display inline
                     span
                         display inline-block
                         padding-bottom 6px

@@ -130,7 +130,6 @@
             <div class="content-block">
                 <div class="dc_price">
                     <span class="red_price">￥81.6</span>
-                    <span class="gary_price" style="display: none;"></span>
                 </div>
                 <div class="choice_popup">
                     <h5>选择仓库</h5>
@@ -166,6 +165,7 @@
     import Vue from 'vue'
     import BootstrapVue from 'bootstrap-vue'
     import popup from '../../components/popup/popup.vue'
+    import {getImg, getBanners} from '../../api/detail'
     Vue.use(BootstrapVue)
     export default {
         data() {
@@ -181,18 +181,8 @@
                 {text: '图文详情',mxPage:2 },
                 {text: '评价(0)',mxPage:3 }
                 ],
-                imgs: [
-                    {text: '详情',src:'static/images/detail/pic01.jpg' },
-                    {text: '详情',src:'static/images/detail/pic02.jpg' },
-                    {text: '详情',src:'static/images/detail/pic03.jpg' },
-                    {text: '详情',src:'static/images/detail/pic04.jpg' },
-                    {text: '详情',src:'static/images/detail/pic05.jpg' }
-                ],
-                banners: [
-                {text: '麦肯',bannersImg:'static/images/detail/2801_thumb_P_1467940646393.jpg',bannerJump:'/brands' },
-                {text: '麦肯',bannersImg:'static/images/detail/2801_thumb_P_1467997974638.jpg',bannerJump:'/brands' },
-                {text: '麦肯',bannersImg:'static/images/detail/2801_thumb_P_1467997974583.jpg',bannerJump:'/brands' }
-                ],
+                imgs: [ ],
+                banners: [],
                 selected: 0,
                 goodsNum: 12,
                 goodsOrdNum: 1,
@@ -219,6 +209,14 @@
                 show:false
             }
         },
+        beforeMount(){
+            getImg(this.$router.currentRoute.params.id).then(value => {
+                this.imgs = value
+              }),
+              getBanners(this.$router.currentRoute.params.id).then(value => {
+                this.banners = value
+              })
+            },
         methods: {
         choose:function (index) {
                 this.selected = index
