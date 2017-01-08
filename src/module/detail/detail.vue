@@ -181,7 +181,7 @@
                 {text: '图文详情',mxPage:2 },
                 {text: '评价(0)',mxPage:3 }
                 ],
-                imgs: [ ],
+                imgs: [],
                 banners: [],
                 selected: 0,
                 goodsNum: 12,
