@@ -91,6 +91,8 @@ import Modal from '../../components/modal/modal.vue'
             .lt
                 span
                     color #fff
+                i
+                    color #fff
          li
             width 100%
             overflow hidden
@@ -111,16 +113,21 @@ import Modal from '../../components/modal/modal.vue'
                     display block
                     float left
                 span
+                    overflow hidden
                     float left
                     i
-                    font-style normal
-                    color #333
-                    font-weight bold
+                        float right
+                        font-style normal
+                        color #333
+                        font-weight bold
                 s
                     float right
                     text-decoration none
+
         .btn
             width 100%
+            height 3em
+            font-size 18px
             color #fff!important
             position fixed
             bottom 0

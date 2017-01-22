@@ -48,71 +48,60 @@
   }
 </script>
 
-<style scoped lang="scss" rel="stylesheet/scss">
-  ul,li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  .show-sidebar{
-    transform: translateX(240px);
-    -webkit-transform: translateX(240px);
-  }
-  .sidebar-box{
-    position: fixed;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    height: 100%;
-    overflow: auto;
-    width: 240px;
-    left: -240px;
-    z-index: 99;
-    top: 0;
-    bottom: 0;
-    transition: all .3s ease;
-    background: #fff;
-    &.show-sidebar{
-      transform: translateX(240px);
-      -webkit-transform: translateX(240px);
-    }
-    .swiper-slide {
-      height: auto;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-    }
-  }
-  .sidebar-box{
-    .sidebar-header{
-      padding: 15px;
-      background: #5cb85c;
-      color: #fff;
-      font-weight: bold;
-    }
-  }
-  .sidebar-list{
-    padding-bottom: 20px;
-    background: #f9f9f9;
-    .menu-fixed-list {
-    width: 100%;
-    overflow: hidden;
-      li{
-        width: 100%;
-        overflow: hidden;
-        display: block;
-        font-size:14px;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        a{
-          width:  100%;
-          height: 100%;
-          display: block;
-          text-align: center;
-          color:#5cb85c;
-        }
-
-      }
-    }
-  }
+<style lang="stylus" rel="stylesheet/stylus" scoped>
+  ul,li
+    list-style none
+    margin 0
+    padding 0
+  .show-sidebar
+    transform translateX(240px)
+    -webkit-transform translateX(240px)
+  .sidebar-box
+    position fixed
+    transform translateZ(0)
+    -webkit-transform translateZ(0)
+    height 100%
+    overflow auto
+    width 240px
+    left -240px
+    z-index 99
+    top 0
+    bottom 0
+    transition all .3s ease
+    background #fff
+    &.show-sidebar
+      transform translateX(240px)
+      -webkit-transform translateX(240px)
+    .swiper-slide
+      height auto
+      -webkit-box-sizing border-box
+      box-sizing border-box
+  .sidebar-box
+    .sidebar-header
+      padding 15px
+      background #5cb85c
+      color #fff
+      font-weight bold
+  .sidebar-list
+    padding-bottom 20px
+    background-color #f9f9f9
+  .menu-fixed-list
+    width 100%
+    overflow hidden
+    li
+      width 100%
+      overflow hidden
+      display block
+      font-size 14px
+      text-align center
+      padding-top 5px
+      padding-bottom 5px
+        a
+          width  100%
+          height 100%
+          display block
+          text-align center
+          color#5cb85c
 
 
 
