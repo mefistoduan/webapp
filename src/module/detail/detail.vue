@@ -149,10 +149,10 @@
                     <h5>购买数量</h5>
                     <div class="pop_info">
                         <div class="calc_num">
-                            <a class="btn_reduce" @click="reduce(index)">-</a>
+                            <a class="btn_reduce" @click="dec">-</a>
                             <input name="number" type="text" class="text" v-bind:value="goodsOrdNum">
                             <input type="hidden" name="miaosha_attr" value="">
-                            <a class="btn_add" @click="add(index)">+</a>
+                            <a class="btn_add" @click="inc">+</a>
                         </div>
                     </div>
                 </div>
@@ -165,6 +165,7 @@
     import Vue from 'vue'
     import BootstrapVue from 'bootstrap-vue'
     import popup from '../../components/popup/popup.vue'
+    import store from '../../store'
     import {getImg, getBanners} from '../../api/detail'
     Vue.use(BootstrapVue)
     export default {
@@ -174,6 +175,8 @@
                     popupName:'购买菜单'
                 },
                 items: [
+                {text: '麦肯',brandsImg:'static/images/2724_P_1470597064231.jpg' },
+                {text: '麦肯',brandsImg:'static/images/2724_P_1470597064231.jpg' },
                 {text: '麦肯',brandsImg:'static/images/2724_P_1470597064231.jpg' }
                 ],
                 tabs: [
@@ -182,10 +185,14 @@
                 {text: '评价(0)',mxPage:3 }
                 ],
                 imgs: [],
-                banners: [],
+                banners: [
+                    {text: '麦肯',bannersImg:'static/images/detail/2801_thumb_P_1467940646393.jpg',bannerJump:'/brands' },
+                    {text: '麦肯',bannersImg:'static/images/detail/2801_thumb_P_1467997974638.jpg',bannerJump:'/brands' },
+                    {text: '麦肯',bannersImg:'static/images/detail/2801_thumb_P_1467997974583.jpg',bannerJump:'/brands' }
+                ],
                 selected: 0,
                 goodsNum: 12,
-                goodsOrdNum: 1,
+                goodsOrdNum: 0,
                 goodsName:'欧萨 混合油橄榄果渣油 意大利进口 1L/瓶 12瓶/箱',
                 language:'detail_English',
                 oenglish:"OUSA POMACE OLIVE OIL imported from Italy 1L/bottle 12bottles/carton",
@@ -217,6 +224,11 @@
                 this.banners = value
               })
             },
+        computed: {
+            goodsOrdNum () {
+                return store.state.goodsOrdNum
+            }
+         },
         methods: {
         choose:function (index) {
                 this.selected = index
@@ -259,6 +271,7 @@
             },
             ok(popup) {
                 this.show = false
+                this.$router.push({ path:'/cart'})
             },
             cancel(popup) {
                 this.show = false
@@ -266,30 +279,11 @@
             showPopup:function () {
                 this.show = true
             },
-            add:function() {
-                let max = this.goodsNum
-                let  n = this.goodsOrdNum
-                if(n<max){
-                    n++
-                }
-                else{
-                    n=max
-                    this.showVariable = false
-                    this.showVariable = true
-                }
-                this.goodsOrdNum = n
-            },
-            reduce:function(index) {
-                let  n = this.goodsOrdNum
-                if(n>0){
-                    n--
-                }
-                else{
-                    n=0
-                    this.showVariable = false
-                    this.showVariable = true
-                }
-                this.goodsOrdNum = n
+            inc () {
+            store.commit('inc')
+             },
+            dec () {
+                store.commit('dec')
             }
         },
         components: {
