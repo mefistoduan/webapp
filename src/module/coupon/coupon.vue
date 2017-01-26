@@ -62,6 +62,8 @@
 <style lang="stylus" rel="stylesheet/stylus" scoped>
     body
         padding-top 5px
+    .pepper-con
+        padding-bottom 2em
     .pepper-w
         width 95%
         margin 0 auto

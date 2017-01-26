@@ -251,6 +251,7 @@
 
 .list_container
         display block
+        padding-bottom 2em
      p
         width 90%
         display block
@@ -411,10 +412,12 @@
          .jdNum
              font-weight bold
     .scroll_more
+        display none
         p
             text-align center
 //            提示符
 .infinite-scroll-preloader
+    display none
     margin 0.5rem
     text-align: center
 .preloader
