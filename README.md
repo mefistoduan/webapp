@@ -4,6 +4,7 @@
 npm install 
 
 npm install node-sass
+
 npm install bootstrap-vue
 
 npm run dev
