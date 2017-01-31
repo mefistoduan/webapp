@@ -102,8 +102,5 @@
           display block
           text-align center
           color#5cb85c
-
-
-
 </style>
 
