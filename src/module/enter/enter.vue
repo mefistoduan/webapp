@@ -52,6 +52,7 @@
                 <div class="m_two_col">
                     <div class="mc">
                         <div class="m_two_col">
+
                             <ul class="m_two_col-t list-container">
                                 <li v-for="good in goods">
                                     <div class="module">
@@ -68,6 +69,7 @@
                                 </li>
                             </ul>
                         </div>
+                        <mugen-scroll :handler="fetchData" :should-handle="!loading">
                         <div class="scroll_more">
                             <p>继续滑动加载更多</p>
                         </div>
@@ -75,7 +77,7 @@
                         <div class="infinite-scroll-preloader">
                             <div class="preloader"></div>
                         </div>
-
+                        </mugen-scroll>
                     </div>
                 </div>
             </div>
@@ -88,6 +90,7 @@
     import Vue from 'vue'
     import BootstrapVue from 'bootstrap-vue'
     import {getgoods,getgoods0,getgoods1,getgoods2,getgoods3} from '../../api/enter'
+    import MugenScroll from 'vue-mugen-scroll'
     Vue.use(BootstrapVue)
     export default {
         data() {
@@ -112,7 +115,8 @@
                 goods3: [],
                 showVariable:false,
                 selected: 0,
-                dataNow:'09:37'
+                dataNow:'09:37',
+                loading: false
             }
         },
           beforeMount(){
@@ -149,14 +153,21 @@
                 if(page==3){
                     this.goods = this.goods3
                 }
-
             },
             open:function () {
                this.showVariable = false
                this.showVariable = true
-            }
+            },
+             fetchData() {
+              this.loading = true
+              this.loading = false
+                for (var i=0; i < 3; i++) {
+                   this.goods =  this.goods.concat(this.goods)
+                }
+             }
         },
         components: {
+        MugenScroll
         }
     }
 </script>
@@ -412,12 +423,10 @@
          .jdNum
              font-weight bold
     .scroll_more
-        display none
         p
             text-align center
 //            提示符
 .infinite-scroll-preloader
-    display none
     margin 0.5rem
     text-align: center
 .preloader
@@ -440,12 +449,8 @@
     @-webkit-keyframes preloader-spin
         100%
             -webkit-transform rotate(360deg)
-
-
     @keyframes preloader-spin
         100%
             -webkit-transform rotate(360deg)
             transform rotate(360deg)
-
-
 </style>
