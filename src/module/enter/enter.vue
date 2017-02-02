@@ -158,7 +158,7 @@
                this.showVariable = false
                this.showVariable = true
             },
-             fetchData() {
+            fetchData() {
               this.loading = true
               this.loading = false
                 for (var i=0; i < 3; i++) {

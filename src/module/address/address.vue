@@ -13,6 +13,9 @@
                         {{item.addressInfo}}
                     </p>
                 </div>
+                <div class="rt">
+                    <s @click="deleteIt(index)">X</s>
+                </div>
             </li>
         </ul>
         <button @click='address' class="btn btn-success">
@@ -54,6 +57,9 @@ import Modal from '../../components/modal/modal.vue'
             choose:function (index) {
                 this.selected = index
             },
+            deleteIt:function (index) {
+                 this.items.splice(index, 1)
+            },
             address() {
                 this.show = true
             },
@@ -84,6 +90,7 @@ import Modal from '../../components/modal/modal.vue'
          padding 0
          padding-bottom 30px
          margin 0
+         margin-bottom 1em
          list-style none
          .active
             background-color #676F85!important
@@ -123,6 +130,13 @@ import Modal from '../../components/modal/modal.vue'
                 s
                     float right
                     text-decoration none
+            .rt
+                s
+                    float right
+                    margin-right 1em
+                    text-decoration none
+                    font-size 18px
+                    text-align center
 
         .btn
             width 100%

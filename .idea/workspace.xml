@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/address/address.vue" afterPath="$PROJECT_DIR$/src/module/address/address.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/enter/enter.vue" afterPath="$PROJECT_DIR$/src/module/enter/enter.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/favourable/favourable.vue" afterPath="$PROJECT_DIR$/src/module/favourable/favourable.vue" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -29,11 +30,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="enter.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/module/enter/enter.vue">
+      <file leaf-file-name="favourable.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/favourable/favourable.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3281062">
-              <caret line="149" column="28" selection-start-line="149" selection-start-column="28" selection-end-line="149" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="158" column="18" selection-start-line="158" selection-start-column="18" selection-end-line="158" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="address.vue" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/module/address/address.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.59371364">
+              <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -104,8 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/components/modal/modal.vue" />
-        <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/user_content.dwt" />
         <option value="F:/wamp/www/emeixian/shop_index.php" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/css/shop_index.css" />
         <option value="$PROJECT_DIR$/src/components/popup/popup.vue" />
@@ -155,6 +164,8 @@
         <option value="$PROJECT_DIR$/src/components/toast/toast.vue" />
         <option value="I:/work/my-tools/tools/test/stiticy.html" />
         <option value="$PROJECT_DIR$/src/module/enter/enter.vue" />
+        <option value="$PROJECT_DIR$/src/module/favourable/favourable.vue" />
+        <option value="$PROJECT_DIR$/src/module/address/address.vue" />
       </list>
     </option>
   </component>
@@ -410,13 +421,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/module/address/address.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="73" selection-start-line="5" selection-start-column="68" selection-end-line="5" selection-end-column="73" />
         </state>
       </provider>
     </entry>
@@ -709,8 +713,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/enter/enter.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3281062">
-          <caret line="149" column="28" selection-start-line="149" selection-start-column="28" selection-end-line="149" selection-end-column="28" />
+        <state vertical-scroll-proportion="1.2983294">
+          <caret line="64" column="50" selection-start-line="64" selection-start-column="50" selection-end-line="64" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/favourable/favourable.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="158" column="18" selection-start-line="158" selection-start-column="18" selection-end-line="158" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/address/address.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59371364">
+          <caret line="60" column="16" selection-start-line="60" selection-start-column="16" selection-end-line="60" selection-end-column="16" />
           <folding />
         </state>
       </provider>

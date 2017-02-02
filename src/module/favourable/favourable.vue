@@ -31,14 +31,15 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="scroll_more">
-                            <p>继续滑动加载更多</p>
-                        </div>
-                        <!-- 加载提示符 -->
-                        <div class="infinite-scroll-preloader">
-                            <div class="preloader"></div>
-                        </div>
-
+                        <mugen-scroll :handler="fetchData" :should-handle="!loading">
+                            <div class="scroll_more">
+                                <p>继续滑动加载更多</p>
+                            </div>
+                            <!-- 加载提示符 -->
+                            <div class="infinite-scroll-preloader">
+                                <div class="preloader"></div>
+                            </div>
+                        </mugen-scroll>
                     </div>
                 </div>
             </div>
@@ -50,6 +51,7 @@
 <script>
     import Vue from 'vue'
     import BootstrapVue from 'bootstrap-vue'
+    import MugenScroll from 'vue-mugen-scroll'
     Vue.use(BootstrapVue)
     export default {
         data() {
@@ -120,7 +122,8 @@
                 ],
                 showVariable:false,
                 selected: 0,
-                dataNow:'09:37'
+                dataNow:'09:37',
+                loading: false
             }
 
         },
@@ -148,9 +151,17 @@
             open:function () {
                this.showVariable = false
                this.showVariable = true
-            }
+            },
+            fetchData() {
+              this.loading = true
+              this.loading = false
+                for (var i=0; i < 3; i++) {
+                   this.goods =  this.goods.concat(this.goods)
+                }
+             }
         },
         components: {
+        MugenScroll
         }
     }
 </script>
