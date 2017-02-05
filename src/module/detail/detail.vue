@@ -7,11 +7,9 @@
         </div>
 
         <div class="carouselContainer" v-show="tab01">
-            <b-carousel :interval="5000" :controls="false" :indicators="true">
-                <b-slide v-for="banner in banners">
+                <div v-for="banner in banners">
                         <img v-bind:src="banner.bannersImg" >
-                </b-slide>
-            </b-carousel>
+                </div>
         </div>
 
         <div class="detail_content" v-show="tab01">
@@ -163,11 +161,9 @@
 
 <script>
     import Vue from 'vue'
-    import BootstrapVue from 'bootstrap-vue'
     import popup from '../../components/popup/popup.vue'
     import store from '../../store'
     import {getImg, getBanners} from '../../api/detail'
-    Vue.use(BootstrapVue)
     export default {
         data() {
             return {
@@ -304,7 +300,10 @@
     padding-top 5px
     background-color #efeff4
     img
-        margin 0
+        width 60%
+        height 80%
+        display block
+        margin 0 auto
         padding 0
 .carouselContainer
     width 100%
@@ -397,7 +396,7 @@
     width 22px
     height 22px
     position absolute
-    z-index 10
+    z-index 5
     right 6px
     bottom -4px
     background url(../../../static/images/detail/EN.png) no-repeat top center

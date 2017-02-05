@@ -4,15 +4,12 @@
         <div class="header">
         </div>
         <div class="carouselContainer">
-            <b-carousel :interval="5000" :controls="false" :indicators="true">
-                <b-slide v-for="banner in banners">
+            <div class="container_banner" v-for='banner in banners'>
                     <router-link v-bind:to="banner.bannerJump" class="jump_part">
                         <img v-bind:src="banner.bannersImg" >
                     </router-link>
-                </b-slide>
-            </b-carousel>
+            </div>
         </div>
-
         <div class="row ss-nav">
             <div class="col-25">
                 <router-link to="category" class="jump_part">
@@ -88,10 +85,8 @@
 
 <script>
     import Vue from 'vue'
-    import BootstrapVue from 'bootstrap-vue'
     import {getgoods,getgoods0,getgoods1,getgoods2,getgoods3} from '../../api/enter'
     import MugenScroll from 'vue-mugen-scroll'
-    Vue.use(BootstrapVue)
     export default {
         data() {
             return {
@@ -183,6 +178,7 @@
     .enter
         background-color #EFEFF4
         img
+            width 100%
             margin 0
             padding 0
         .carouselContainer
