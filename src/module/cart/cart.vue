@@ -5,9 +5,6 @@
                 <p class="cart_title">全选</p>
             </div>
             <ul class="list">
-                <b-alert :show="showVariable" :state="state" dismissible>
-                    低于或高于限制数量
-                </b-alert>
                 <li v-for="(item, index) in items">
                     <div class="weui_cell_hd meixian_self_item city_qd_item check_item goods_checkbox_item" alt="1">
                         <input type="checkbox" class="shoppting-checkbox" v-bind:checked="shouldCheck" name="rec_id[]" v-bind:value="item.goodsId">
