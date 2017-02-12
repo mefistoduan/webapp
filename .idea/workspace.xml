@@ -2,8 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee19997b-8019-484d-8228-76851b81c927" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/app.c216f64af6d772f2d94dcaaf8ef07b22.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/app.c216f64af6d772f2d94dcaaf8ef07b22.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/components.93fbb9f17e75a169b5cb2dd60ffa0123.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/components.93fbb9f17e75a169b5cb2dd60ffa0123.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/element.a78b8142346b322556c127e9593e7e85.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/element.a78b8142346b322556c127e9593e7e85.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/manifest.69b5fabad966bc1066f1bf7150e6c582.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/manifest.69b5fabad966bc1066f1bf7150e6c582.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/static/fonts/element-icons.a61be9c.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/static/fonts/element-icons.b02bdc1.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/static/fonts/glyphicons-halflings-regular.448c34a.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/static/fonts/glyphicons-halflings-regular.e18bbf6.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/static/fonts/glyphicons-halflings-regular.f4769f9.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/css/static/fonts/glyphicons-halflings-regular.fa27723.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/fonts/element-icons.a61be9c.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/fonts/element-icons.b02bdc1.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/fonts/glyphicons-halflings-regular.448c34a.woff2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/fonts/glyphicons-halflings-regular.e18bbf6.ttf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/fonts/glyphicons-halflings-regular.f4769f9.eot" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/fonts/glyphicons-halflings-regular.fa27723.woff" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/img/add.b85336b.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/img/all.c169fbb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/img/element-icons.09162bc.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/img/favorite.a72cbb9.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/img/glyphicons-halflings-regular.f721466.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/app.5a49aed145eb61248bcd.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/app.5a49aed145eb61248bcd.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/components.100231245b324e87fca9.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/components.100231245b324e87fca9.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/element.50565d75dcce4baeb91c.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/element.50565d75dcce4baeb91c.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/manifest.cfd6ef860bc085378eec.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/manifest.cfd6ef860bc085378eec.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/vendor.fe6ab1d51d3b586e2ece.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/assets/static/js/vendor.fe6ab1d51d3b586e2ece.js.map" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/module/cart/cart.vue" afterPath="$PROJECT_DIR$/src/module/cart/cart.vue" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/router/index.js" afterPath="$PROJECT_DIR$/src/router/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -27,12 +62,32 @@
     <fileColor scope="Changed Files" color="ebebeb" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="cart.vue" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14049587">
-              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="23" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testajax.vue" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/module/test/testajax.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="webpack.base.conf.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/build/webpack.base.conf.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.36634845">
+              <caret line="10" column="37" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -103,7 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="F:/wamp/www/emeixian/mobile/js/cart_checkout_package.js" />
         <option value="F:/wamp/www/emeixian/mobile/js/settle.js" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_1122pot.dwt" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_newYear_delear.dwt" />
@@ -113,7 +167,6 @@
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/chain_res/css/common.css" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/css/common.css" />
         <option value="$PROJECT_DIR$/src/module/index/index.html" />
-        <option value="$PROJECT_DIR$/src/router/index.js" />
         <option value="F:/wamp/www/emeixian/admin/styles/topic.css" />
         <option value="F:/wamp/www/emeixian/admin/templates/topic_model.htm" />
         <option value="F:/wamp/www/emeixian/themes/68ecshopcom_360buy/topic_restaurant_level_up.dwt" />
@@ -154,6 +207,8 @@
         <option value="$PROJECT_DIR$/../first/webapp/package.json" />
         <option value="$PROJECT_DIR$/../first/webapp/src/router/index.js" />
         <option value="$PROJECT_DIR$/src/module/cart/cart.vue" />
+        <option value="$PROJECT_DIR$/src/router/index.js" />
+        <option value="$PROJECT_DIR$/src/module/test/testajax.vue" />
       </list>
     </option>
   </component>
@@ -179,10 +234,9 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1035" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -331,7 +385,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1035" extended-state="7" />
+    <frame x="-7" y="0" width="974" height="1026" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17948718" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -377,13 +431,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -507,13 +554,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1607565">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/webpack.base.conf.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18085106">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -706,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/router/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84907836">
-          <caret line="65" column="53" selection-start-line="46" selection-start-column="4" selection-end-line="65" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.13885505">
@@ -722,8 +755,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/module/cart/cart.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14049587">
+        <state vertical-scroll-proportion="0.14200477">
           <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../static/data.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/router/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="23" selection-start-line="59" selection-start-column="14" selection-end-line="59" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/module/test/testajax.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="36" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/webpack.base.conf.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.36634845">
+          <caret line="10" column="37" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="37" />
           <folding />
         </state>
       </provider>
