@@ -20,6 +20,7 @@ import detail from '../module/detail/detail.vue'
 import cart from '../module/cart/cart.vue'
 import test from '../module/test/test.vue'
 import test2 from '../module/test/test2.vue'
+import testajax from '../module/test/testajax.vue'
 import finish from '../module/finish/finish.vue'
 import category from '../module/category/category.vue'
 import favourable from '../module/favourable/favourable.vue'
@@ -56,6 +57,7 @@ export default new Router({
     { path: '/checkout', component: checkout },
     { path: '/test', component: test },
     { path: '/test2', component: test2 },
+    { path: '/testajax', component: testajax },
     { path: '/finish', component: finish },
     { path: '/category', component: category },
     { path: '/favourable', component: favourable },
