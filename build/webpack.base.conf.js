@@ -3,7 +3,6 @@ var config = require('../config')
 var utils = require('./utils')
 var merge = require('webpack-merge')
 var projectRoot = path.resolve(__dirname, '../')
-var webpack = require("webpack")
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
@@ -72,12 +71,5 @@ module.exports = {
         browsers: ['last 2 versions']
       })
     ]
-  },
-  plugins: [
-    new webpack.optimize.CommonsChunkPlugin('common.js'),
-    new webpack.ProvidePlugin({
-      jQuery: "jquery",
-      $: "jquery"
-    })
-  ]
+  }
 }

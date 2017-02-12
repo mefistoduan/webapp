@@ -14,7 +14,6 @@
     "bootstrap-vue": "^0.3.12",
     "element-ui": "^1.0.0-rc.7",
     "es6-promise": "^3.2.1",
-    "jquery": "^2.2.3",
     "vue": "^2.0.1",
     "vue-mugen-scroll": "^0.2.1",
     "vue-progressbar": "^0.4.1",
