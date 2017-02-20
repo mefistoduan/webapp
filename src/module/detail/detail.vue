@@ -188,7 +188,6 @@
                 ],
                 selected: 0,
                 goodsNum: 12,
-                goodsOrdNum: 0,
                 goodsName:'欧萨 混合油橄榄果渣油 意大利进口 1L/瓶 12瓶/箱',
                 language:'detail_English',
                 oenglish:"OUSA POMACE OLIVE OIL imported from Italy 1L/bottle 12bottles/carton",
@@ -565,6 +564,7 @@ em
     background-color #fff
     img
         width 32px
+        height 32px
         display block
         margin 0 auto
  .tab-label

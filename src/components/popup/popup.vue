@@ -158,13 +158,13 @@
 
 <style scoped rel="stylesheet/stylus">
     .popup {
-        display: block;
         position: fixed;
         top: 50%;
         right: 0;
         bottom: 0;
         left: 0;
         z-index: 1050;
+        display: block;
         overflow: hidden;
         -webkit-overflow-scrolling: touch;
         outline: 0;
@@ -220,4 +220,13 @@
     .modal-footer button {
         padding:10px 20px;
     }
+@media only screen and (max-width: 320px){
+    .popup {
+        top: 46%;
+        height: 360px;
+        }
+}
+
+
+
 </style>
