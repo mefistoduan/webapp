@@ -21,6 +21,7 @@ import cart from '../module/cart/cart.vue'
 import test from '../module/test/test.vue'
 import test2 from '../module/test/test2.vue'
 import testajax from '../module/test/testajax.vue'
+import testswipe from '../module/test/test_swipe.vue'
 import finish from '../module/finish/finish.vue'
 import category from '../module/category/category.vue'
 import favourable from '../module/favourable/favourable.vue'
@@ -58,6 +59,7 @@ export default new Router({
     { path: '/test', component: test },
     { path: '/test2', component: test2 },
     { path: '/testajax', component: testajax },
+    { path: '/testswipe', component: testswipe },
     { path: '/finish', component: finish },
     { path: '/category', component: category },
     { path: '/favourable', component: favourable },
