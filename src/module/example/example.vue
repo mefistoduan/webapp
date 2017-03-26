@@ -205,7 +205,7 @@
       img
        margin-left 15px
     .new-mu_l2cw
-      width 65%
+      width 60%
       height 100%
       padding-bottom 18px
       float right

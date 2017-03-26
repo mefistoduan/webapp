@@ -121,14 +121,14 @@ import Modal from '../../components/modal/modal.vue'
                     float left
                 span
                     overflow hidden
-                    float left
+                    display block
                     i
                         float right
                         font-style normal
                         color #333
                         font-weight bold
                 s
-                    float right
+                    display block
                     text-decoration none
             .rt
                 s

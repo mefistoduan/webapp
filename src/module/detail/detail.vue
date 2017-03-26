@@ -293,14 +293,17 @@
         list-style none
         padding 0
         margin 0
+.carouselContainer
+    div
+        height 100%
 .detail
     width 100%
     overflow hidden
     padding-top 5px
     background-color #efeff4
     img
-        width 60%
-        height 80%
+        width 80%
+        height 100%
         display block
         margin 0 auto
         padding 0
@@ -380,7 +383,6 @@
             font-family Verdana
     .dc_price
         width 95%
-        height 2em
         display block
         margin 0 auto
         margin-top 10px
@@ -422,6 +424,7 @@
     margin 0 auto
     margin-top 20px
     display block
+    overflow hidden
  ul
     width 95%
     display block
@@ -430,7 +433,6 @@
     margin 0 auto
     li
         width 100%
-        height 2.3em
         padding 0
         margin 0
         list-style none
