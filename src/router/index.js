@@ -3,7 +3,7 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-import enter from '../module/enter/enter.vue'
+import index from '../module/index/App.vue'
 import About from '../module/about/about.vue'
 import AddressList from '../module/addressList/index.vue'
 import createListView from '../module/addressList/CreateListView.js'
@@ -35,9 +35,9 @@ export default new Router({
   routes: [
     {
       path: '',
-      component: enter,
+      component: index,
       children: [
-        { path : '', component: enter},
+        { path : '', component: index},
         { path : '/AddressList/all',component: createListView('all') },
         { path : '/AddressList/favorite',component: createListView('favorite') },
         { path : '/AddressList/add',component: addAddressList },

@@ -38,7 +38,7 @@
         </div>
 
         <div class="tabs_index">
-            <ul>
+            <ul class="tabs_index_ul">
                 <li v-for="(tab,index) in tabs" v-bind:class="{curr:index === selected}" @click="choose(index)"><a href="javascript:void(0);" v-bind:mxPage="tabs.mxPage">{{tab.text}}</a></li>
             </ul>
         </div>
@@ -79,7 +79,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -183,7 +182,7 @@
             padding 0
         .carouselContainer
             width 100%
-            height 212px
+            height 180px
             overflow hidden
            .carousel
                 width 100%
@@ -226,18 +225,18 @@
     background-color #fff
     overflow hidden
     margin-top 20px
- ul
+ .tabs_index_ul
     width 100%
     height 100%
     margin 0
     padding 0
-  li
-    width 25%
-    float left
-    height 100%
-    list-style none
-    margin 0
-    padding 0
+    li
+        width 25%
+        float left
+        height 100%
+        list-style none
+        margin 0
+        padding 0
     a
         width 95%
         display block
@@ -374,7 +373,6 @@
         float right
     .module
         height21em
-        margin-right 2%
         float left
         background-color #FFF
         padding .7em .5em

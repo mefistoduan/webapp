@@ -3,13 +3,11 @@
     <div class="header">
       <div class="inner">
         <button class="logo btn btn-success btn-md" alt="logo" @click="showBar"><i class="glyphicon glyphicon-align-justify"></i></button>
-        <form action="" class="bs-example bs-example-form">
         <div class=" col-xs-7 search_part">
           <span class="icon_question"><i class="glyphicon glyphicon-search"></i></span>
-          <input type="text" class="search_content" placeholder="试试薯条+奶酪">
-          <button class="search_content_button">搜索</button>
+          <input type="text" class="search_content" placeholder="试试薯条">
+          <input type="button" class="search_content_button" value="搜索">
         </div>
-        </form>
         <router-link to="/About"><button class="btn btn-success btn-md"><i class="glyphicon glyphicon-user"></i></button></router-link>
       </div>
     </div>
@@ -27,9 +25,6 @@
 <script>
 import EgdSideBar from 'sidebar'
     export default {
-      submit() {
-            console.log('Vue ready...')
-      },
       components: {
       EgdSideBar
         }
